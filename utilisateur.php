@@ -234,7 +234,7 @@
 <div class="container-large">
     <div class="product-slider">
         <div class="title-head">
-            <h2 class="text-black">What's Trending</h2>
+            <h2 class="text-black">Quelle tendance</h2>
             <p>Be Healty Organic Food</p>
         </div>
         <div class="slider-product owl-carousel owl-theme">
