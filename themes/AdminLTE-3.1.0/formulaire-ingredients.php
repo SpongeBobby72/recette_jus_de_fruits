@@ -1,6 +1,13 @@
 <?php
 $nom="Ajout d'une tâche";
 require ('../../back/config-sample.php');
+
+try {
+  $db = new PDO($dsn, $username, $password);
+} catch (PDOException $e) {
+  var_dump($e);
+}
+
 if (!empty($_POST)) {
 //On regarde si les variables existent et qu'elles ne contiennent pas de balises html ou javascript
   $nom = isset($_POST['nom']) ? strip_tags($_POST['nom']) : '';
@@ -12,38 +19,16 @@ if (!empty($_POST)) {
 if (isset($nom)
   && isset($img)
   && isset($type) ){
-  if ($_POST['type']===1){
-  //Préparation de la requête
-  $ajout_legume = $dsn -> prepare('INSERT INTO Fruits(name, img)
+  if ($_POST['type']==='1'){
+    //Préparation de la requête
+    $ajout_legume = $db -> prepare('INSERT INTO Fruits(name, img)
                                     VALUES (:name, :img)');
-  $ajout_legume -> execute(array(
-    ':name' => $nom,
-    ':img' => $img,
-  ));
-}} else {
+    $ajout_legume -> execute(array(
+      ':name' => $nom,
+      ':img' => $img,
+    ));
+  }} else {
   echo"veuillez remplir tout les champs !";
-}
-if (isset($_FILES['img'])) {
-  $extensions = array('.png', '.jpg', '.jpeg');
-  $extension = strrchr($_FILES['img']['name'], '.');
-  if ($_FILES['img']['type'] == 'image/jpeg') { $extension = '.jpeg'; }
-  if ($_FILES['img']['type'] == 'image/jpg') { $extension = '.jpg'; }
-  if ($_FILES['img']['type'] == 'image/png') { $extension = '.png'; }
-  if ($_FILES['img']['size'] < 3000000) {
-    $name=rand(10000, 99999).$extension;
-    move_uploaded_file($_FILES['img']['tmp_name'], 'uploads/'.$name);
-  } else {
-    echo 'Fichier trop gros';
-
-  }
-  $url = 'uploads/'.$name;
-}
-if (isset($url)) {
-  $image_bd = $db->prepare('INSERT INTO Legumes (img)
-                              VALUES (:img)');
-  $image_bd->execute(array(
-    ':img'=>$url,
-  ));
 }
 //Je prépare la requête qui me permet de récupérer les tâches pour les afficher dans le tableau
 
@@ -75,7 +60,7 @@ if (isset($url)) {
         </select>
       </div>
       <div id="img-form">
-        <label for="img">Image </label>
+        <label for="img">Nom </label>
         <input type="file" id="img" name="img" >
       </div>
       <div id="validation_tache">
