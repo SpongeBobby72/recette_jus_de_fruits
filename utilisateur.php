@@ -381,7 +381,7 @@
             <div class="row">
                 <div class="col-md-12">
                     <div class="subscribe text-center">
-                        <h2>Join our secret society</h2>
+                        <h2>Rejoins notre société secrète</h2>
                         <form>
                             <div class="form-group">
                                 <input type="text" placeholder="Enter your email...">
