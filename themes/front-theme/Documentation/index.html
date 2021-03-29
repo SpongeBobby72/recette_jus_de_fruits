@@ -1,0 +1,858 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head lang="en">
+	<meta http-equiv="content-type" content="text/html;charset=utf-8">
+	<title>Cinagro Html Theme</title>
+	<!-- Framework CSS -->
+	<link rel="stylesheet" href="assets/blueprint-css/screen.css" type="text/css" media="screen, projection">
+	<link rel="stylesheet" href="assets/blueprint-css/print.css" type="text/css" media="print">
+	<!--[if lt IE 8]><link rel="stylesheet" href="assets/blueprint-css/ie.css" type="text/css" media="screen, projection"><![endif]-->
+	<link rel="stylesheet" href="assets/blueprint-css/plugins/fancy-type/screen.css" type="text/css" media="screen, projection">
+	<script type="text/javascript" src="assets/js/jquery-3.2.1.min.js"></script>
+	<script type="text/javascript" src="assets/js/main.js"></script>
+	<style type="text/css" media="screen">
+		table, hr, .box { margin-bottom:25px; }
+		p { margin: 5px 0 5px 0;}
+		.box p { margin-bottom:10px; }
+		pre { background-color: #F7F8F6; padding: 20px 0px 0px 0px; }
+		img {border: 1px solid #BCBEC0;max-width: 100%;}
+	</style>
+</head>
+
+
+<body>
+	<button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+	<div class="container">
+		<div class="header-block">
+			 <div>
+				<p>HTML Template Documentation</p>
+				<h1 class="center">Cinagro</h1>
+			</div>
+			<img src="assets/images/fruitfulcode.png">
+		 </div>
+		
+		<hr>
+		
+		<div class="menu-column">
+			<ol class="alpha">
+				<li><span class="menu-item" href="#about">About Cinagro</span></li>
+				<li><span class="menu-item" href="#installation">Install Theme</span></li>
+				<li><span class="menu-item" href="#structure">Folder Structure</span></li>
+				<li><span class="menu-item submenu-container" href="#elements">Main Elements</span>
+					<ul class="submenu-list">
+						<li><span class="menu-item submenu-container" href="#carousel">Owl carousel</span></li>
+						<li><span class="menu-item" href="#multiple-carousels">Slider Product</span></li>
+						<li><span class="menu-item" href="#countdown">Schedule</span></li>
+						<li><span class="menu-item" href="#search-cart">Shop With Sidebar</span></li>
+						<li><span class="menu-item" href="#product">Blog Post</span></li>
+						<li><span class="menu-item" href="#banner">Banner</span></li>
+						<li><span class="menu-item" href="#post">Single Product</span></li>
+						<li><span class="menu-item" href="#contact-form">Contact Form</span></li>
+					</ul>
+				</li>
+				<li><span class="menu-item" href="#sources-and-credits">Sources and Credits</a></li>
+				<li><span class="menu-item" href="#contacts">Contacts</span></li>
+			</ol>
+		</div>
+		<div class="content">
+	<div class="content-block active">
+		<h3 id="about"><strong>About Cinagro</strong></h3>
+		<br>
+		<p>Cinagro – new unique, modern, with elegant curves and simple forms, fully responsive HTML theme, based on Bootstrap 3.3.6 created using HTML and LESS.</p>
+		<hr>
+	</div>
+	<div class="content-block">
+		<h3 id="installation"><strong>Install Theme</strong></h3>
+		<br>
+		<div style="padding: 30px; background: red;"><h3 style="color: #fff">Important!</h3></div>
+		<br>
+		<p>In order to get JS loading data you need to install <strong>localhost server</strong> or your computer must have
+        internet access. To install the localhost server You can use <a href="http://www.wampserver.com" target="blank">WAMP</a>.
+        Then you need to:</p>
+    <ul>
+        <li>Copy your files into <code>*wamp/www</code></li>
+        <li>Run <strong>WAMP</strong>. This will start your localhost server.</li>
+        <li>Open <strong>browser</strong> and in URL type <code>localhost/Cinagro</code> (or other path)</li>
+    </ul>
+		<hr>
+	</div>
+	<div class="content-block">
+		<h3 id="structure"><strong>Folder Structure</strong></h3>
+		<ul>
+			<li><strong>Cinagro</strong>
+            <ul>
+                <li><strong>HTML Files</strong></li>
+                <li><strong>assets</strong>
+                    <ul>                   
+                    	<li><strong>audio</strong> - Audio File</li>   
+                        <li><strong>css</strong> - CSS style sheets</li>
+                        <li><strong>fonts</strong> - Font Awesome font</li>
+                        <li><strong>images</strong> - Images</li>
+                        <li><strong>js</strong> - JS script files</li>
+                    </ul>
+                </li>
+                <li><strong>documentation</strong> - This documentation</li>
+            </ul>
+        </li>
+    </ul>
+			</li>
+		</ul>
+		<hr>
+	</div>
+
+	<div class="content-block">
+		<h3 id="carousel"><strong>Owl carousel</strong></h3>
+		<img src="assets/images/product-carousel.jpg">
+		<h6>HTML head</h6>
+		<pre>
+	&lt;link rel="stylesheet" href="css/owl.carousel.min.css" type="text/css"&gt;
+		</pre>
+		<h6>HTML:</h6>
+		<pre>
+	&lt;div class="base-slider owl-carousel owl-theme"&gt;
+		&lt;div class="item"&gt;
+			&lt;img src="assets/images/slider.jpg" alt="slider"&gt;
+			&lt;div class="text-slider"&gt;
+				&lt;h2&gt;Nature has always&lt;br&gt;cared for us!&lt;/h2&gt;
+				&lt;a href="#" class="custom-btn text-center yellow"&gt;top tips&lt;/a&gt;
+			&lt;/div&gt;&lt;!--text-slider--&gt;
+		&lt;/div&gt;&lt;!--item--&gt;
+		&lt;div class="item slide-two"&gt;
+			&lt;img src="assets/images/slider2.jpg" alt="slider"&gt;
+			&lt;div class="text-slider"&gt;
+				&lt;h2&gt;Organic pancakes&lt;br&gt;homestyle&lt;/h2&gt;
+				&lt;span class="price"&gt;12.99$&lt;/span&gt;
+				&lt;a href="#" class="custom-btn text-center yellow"&gt;top tips&lt;/a&gt;
+			&lt;/div&gt;&lt;!--text-slider--&gt;
+		&lt;/div&gt;&lt;!--item--&gt;
+		&lt;div class="item slide-three"&gt;
+			&lt;img src="assets/images/slider3.jpg" alt="slider"&gt;
+			&lt;div class="text-slider last"&gt;
+				&lt;h2&gt;One day sale!&lt;br&gt;large avocados&lt;span class="text-pink"&gt;for $5&lt;/span&gt;&lt;/h2&gt;
+				&lt;div id="countdown"&gt;
+					&lt;div&gt;&lt;span class="hours"&gt;00&lt;/span&gt;&lt;span class="text"&gt;hrs&lt;/span&gt;&lt;/div&gt;
+					&lt;div&gt;&lt;span class="minutes"&gt;00&lt;/span&gt;&lt;span class="text"&gt;min&lt;/span&gt;&lt;/div&gt;
+					&lt;div&gt;&lt;span class="seconds"&gt;00&lt;/span&gt;&lt;span class="text"&gt;sec&lt;/span&gt;&lt;/div&gt;
+				&lt;/div&gt;
+				&lt;a href="#" class="custom-btn green text-center"&gt;top tips&lt;/a&gt;
+			&lt;/div&gt;&lt;!--text-slider--&gt;
+		&lt;/div&gt;&lt;!--item--&gt;
+	&lt;/div&gt;
+		</pre>
+		<h6>Before &lt;/body&gt; tag ends:</h6>
+		<pre>
+	&lt;script type="text/javascript" src="js/lib/owl.carousel.min.js"&gt;&lt;/script&gt;
+		</pre>
+		<h6>Js</h6>
+		<pre>
+	$('.base-slider').owlCarousel({
+		loop: true,
+		margin: 0,
+		nav: false,
+		dots: true,
+		item: 1,
+		responsive:{
+			0:{
+				items:1
+			},
+			600:{
+				items:1
+			},
+			1000:{
+				items:1
+			}
+		}
+	});
+		</pre>
+		<p>Owl-carousel settings can be found <a href="https://owlcarousel2.github.io/OwlCarousel2/" target="blank">here</a>
+		</p>
+		<hr>
+	</div>
+	<div class="content-block">
+		<h3 id="multiple-carousels"><strong>News Carousel Single Blog</strong></h3>
+		<img src="assets/images/news-carusel.jpg" alt="">
+		<h6>HTML:</h6>
+		<pre style="font-size:12px;">
+&lt;div class="slider-product owl-carousel owl-theme"&gt;
+&lt;div class="item"&gt;
+	&lt;div class="product"&gt;
+		&lt;div class="images text-center"&gt;
+			&lt;a href="single-product.html"&gt;&lt;img src="assets/images/product1.png" alt="product1"&gt;&lt;/a&gt;
+			&lt;div class="button-group"&gt;
+				&lt;a href="cart.html" class="custom-btn pink"&gt;&lt;i class="fa fa-shopping-bag"&gt;&lt;/i&gt;&lt;/a&gt;
+				&lt;a href="#" class="custom-btn pink"&gt;&lt;i class="fa fa-search"&gt;&lt;/i&gt;&lt;/a&gt;
+			&lt;/div&gt;&lt;!--button-group--&gt;
+		&lt;/div&gt;&lt;!--images--&gt;
+		&lt;div class="info-product"&gt;
+			&lt;a href="single-product.html" class="title"&gt;Daiya - Cheddar&lt;/a&gt;
+			&lt;span class="price"&gt;$20&lt;/span&gt;
+		&lt;/div&gt;&lt;!--info-product--&gt;
+	&lt;/div&gt;&lt;!--product--&gt;
+&lt;/div&gt;
+&lt;div class="item"&gt;
+	&lt;div class="product"&gt;
+		&lt;div class="images text-center"&gt;
+			&lt;a href="single-product.html"&gt;&lt;img src="assets/images/product2.png" alt="product2"&gt;&lt;/a&gt;
+			&lt;div class="button-group"&gt;
+				&lt;a href="cart.html" class="custom-btn pink"&gt;&lt;i class="fa fa-shopping-bag"&gt;&lt;/i&gt;&lt;/a&gt;
+				&lt;a href="#" class="custom-btn pink"&gt;&lt;i class="fa fa-search"&gt;&lt;/i&gt;&lt;/a&gt;
+			&lt;/div&gt;&lt;!--button-group--&gt;
+		&lt;/div&gt;&lt;!--images--&gt;
+		&lt;div class="info-product"&gt;
+			&lt;a href="single-product.html" class="title"&gt;Vegan Burger - Veggie Mix&lt;/a&gt;
+			&lt;span class="price"&gt;$9.99&lt;/span&gt;
+		&lt;/div&gt;&lt;!--info-product--&gt;
+	&lt;/div&gt;&lt;!--product--&gt;
+&lt;/div&gt;
+&lt;div class="item"&gt;
+	&lt;div class="product"&gt;
+		&lt;div class="images text-center"&gt;
+			&lt;a href="single-product.html"&gt;&lt;img src="assets/images/product3.png" alt="product3"&gt;&lt;/a&gt;
+			&lt;div class="button-group"&gt;
+				&lt;a href="cart.html" class="custom-btn pink"&gt;&lt;i class="fa fa-shopping-bag"&gt;&lt;/i&gt;&lt;/a&gt;
+				&lt;a href="#" class="custom-btn pink"&gt;&lt;i class="fa fa-search"&gt;&lt;/i&gt;&lt;/a&gt;
+			&lt;/div&gt;&lt;!--button-group--&gt;
+		&lt;/div&gt;&lt;!--images--&gt;
+		&lt;div class="info-product"&gt;
+			&lt;a href="single-product.html" class="title"&gt;Vegan Protein&lt;/a&gt;
+			&lt;span class="price"&gt;$50&lt;/span&gt;
+		&lt;/div&gt;&lt;!--info-product--&gt;
+	&lt;/div&gt;&lt;!--product--&gt;
+&lt;/div&gt;
+&lt;div class="item"&gt;
+	&lt;div class="product"&gt;
+		&lt;div class="images text-center"&gt;
+			&lt;a href="single-product.html"&gt;&lt;img src="assets/images/product4.png" alt="product4"&gt;&lt;/a&gt;
+			&lt;div class="button-group"&gt;
+				&lt;a href="cart.html" class="custom-btn pink"&gt;&lt;i class="fa fa-shopping-bag"&gt;&lt;/i&gt;&lt;/a&gt;
+				&lt;a href="#" class="custom-btn pink"&gt;&lt;i class="fa fa-search"&gt;&lt;/i&gt;&lt;/a&gt;
+			&lt;/div&gt;&lt;!--button-group--&gt;
+		&lt;/div&gt;&lt;!--images--&gt;
+		&lt;div class="info-product"&gt;
+			&lt;a href="single-product.html" class="title"&gt;Over the Moo - Ice Cream&lt;/a&gt;
+			&lt;span class="price"&gt;$7.99&lt;/span&gt;
+		&lt;/div&gt;&lt;!--info-product--&gt;
+	&lt;/div&gt;&lt;!--product--&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;!--slider-product--&gt;
+		</pre>
+		<h6>Before &lt;/body&gt; tag ends:</h6>
+		<pre>
+	&lt;script type="text/javascript" src="js/lib/owl.carousel.min.js"&gt;&lt;/script&gt;
+	&lt;script type="text/javascript" src="js/main.js"&gt;&lt;/script&gt;
+		</pre>
+		<h6>Initialize carousels in main.js file</h6>
+		<pre>
+	$('.slider-product').owlCarousel({
+		loop: true,
+		margin: 30,
+		nav: false,
+		dots: true,
+		item: 4,
+		responsive:{
+			0:{
+				items:1
+			},
+			600:{
+				items:2
+			},
+			1000:{
+				items:4
+			}
+		}
+	});
+		</pre>
+		<hr>
+	</div>
+	<div class="content-block">
+		<h3 id="countdown"><strong>Schedule</strong></h3>
+		<img src="assets/images/timer.jpg">
+		<h6>HTML:</h6>
+		<pre>
+&lt;div class="schedule"&gt;
+&lt;div class="row"&gt;
+	&lt;div class="col-md-6 text-center"&gt;
+		&lt;div class="inside"&gt;
+			&lt;div class="title-head"&gt;
+				&lt;h2 class="text-black"&gt;Healthy Lunch&lt;/h2&gt;
+				&lt;p&gt;Be Healty Organic Food&lt;/p&gt;
+			&lt;/div&gt;
+			&lt;ul class="week nav nav-tabs"&gt;
+				&lt;li&gt;&lt;a href="#sunday" data-toggle="tab"&gt;S&lt;/a&gt;&lt;/li&gt;
+				&lt;li class="active"&gt;&lt;a href="#monday" data-toggle="tab" aria-expanded="true"&gt;M&lt;/a&gt;&lt;/li&gt;
+				&lt;li&gt;&lt;a href="#tuesday" data-toggle="tab"&gt;T&lt;/a&gt;&lt;/li&gt;
+				&lt;li&gt;&lt;a href="#wednesday" data-toggle="tab"&gt;W&lt;/a&gt;&lt;/li&gt;
+				&lt;li&gt;&lt;a href="#thursday" data-toggle="tab"&gt;T&lt;/a&gt;&lt;/li&gt;
+				&lt;li&gt;&lt;a href="#friday" data-toggle="tab"&gt;F&lt;/a&gt;&lt;/li&gt;
+				&lt;li&gt;&lt;a href="#saturday" data-toggle="tab"&gt;S&lt;/a&gt;&lt;/li&gt;
+			&lt;/ul&gt;&lt;!--week--&gt;
+			&lt;div class="tab-content"&gt;
+				&lt;div class="tab-pane fade" id="sunday"&gt;
+					&lt;ul&gt;
+						&lt;li class="first"&gt;sunday:&lt;/li&gt;
+						&lt;li&gt;4 oz. grilled chicken breast&lt;/li&gt;
+						&lt;li&gt;1/2 cup sliced strawberries&lt;/li&gt;
+						&lt;li&gt;1/2 cup steamed spinach w/ salt and pepper&lt;/li&gt;
+						&lt;li&gt;1/2 cup brown rice, steamed&lt;/li&gt;
+					&lt;/ul&gt;
+				&lt;/div&gt;
+				&lt;div class="tab-pane fade in active" id="monday"&gt;
+					&lt;ul&gt;
+						&lt;li class="first"&gt;monday:&lt;/li&gt;
+						&lt;li&gt;4 oz. grilled chicken breast&lt;/li&gt;
+						&lt;li&gt;1/2 cup sliced strawberries&lt;/li&gt;
+						&lt;li&gt;1/2 cup steamed spinach w/ salt and pepper&lt;/li&gt;
+						&lt;li&gt;1/2 cup brown rice, steamed&lt;/li&gt;
+					&lt;/ul&gt;
+				&lt;/div&gt;
+				&lt;div class="tab-pane fade" id="tuesday"&gt;
+					&lt;ul&gt;
+						&lt;li class="first"&gt;tuesday:&lt;/li&gt;
+						&lt;li&gt;4 oz. grilled chicken breast&lt;/li&gt;
+						&lt;li&gt;1/2 cup sliced strawberries&lt;/li&gt;
+						&lt;li&gt;1/2 cup steamed spinach w/ salt and pepper&lt;/li&gt;
+						&lt;li&gt;1/2 cup brown rice, steamed&lt;/li&gt;
+					&lt;/ul&gt;
+				&lt;/div&gt;
+				&lt;div class="tab-pane fade" id="wednesday"&gt;
+					&lt;ul&gt;
+						&lt;li class="first"&gt;wednesday:&lt;/li&gt;
+						&lt;li&gt;4 oz. grilled chicken breast&lt;/li&gt;
+						&lt;li&gt;1/2 cup sliced strawberries&lt;/li&gt;
+						&lt;li&gt;1/2 cup steamed spinach w/ salt and pepper&lt;/li&gt;
+						&lt;li&gt;1/2 cup brown rice, steamed&lt;/li&gt;
+					&lt;/ul&gt;
+				&lt;/div&gt;
+				&lt;div class="tab-pane fade" id="thursday"&gt;
+					&lt;ul&gt;
+						&lt;li class="first"&gt;thursday:&lt;/li&gt;
+						&lt;li&gt;4 oz. grilled chicken breast&lt;/li&gt;
+						&lt;li&gt;1/2 cup sliced strawberries&lt;/li&gt;
+						&lt;li&gt;1/2 cup steamed spinach w/ salt and pepper&lt;/li&gt;
+						&lt;li&gt;1/2 cup brown rice, steamed&lt;/li&gt;
+					&lt;/ul&gt;
+				&lt;/div&gt;
+				&lt;div class="tab-pane fade" id="friday"&gt;
+					&lt;ul&gt;
+						&lt;li class="first"&gt;friday:&lt;/li&gt;
+						&lt;li&gt;4 oz. grilled chicken breast&lt;/li&gt;
+						&lt;li&gt;1/2 cup sliced strawberries&lt;/li&gt;
+						&lt;li&gt;1/2 cup steamed spinach w/ salt and pepper&lt;/li&gt;
+						&lt;li&gt;1/2 cup brown rice, steamed&lt;/li&gt;
+					&lt;/ul&gt;
+				&lt;/div&gt;
+				&lt;div class="tab-pane fade" id="saturday"&gt;
+					&lt;ul&gt;
+						&lt;li class="first"&gt;saturday:&lt;/li&gt;
+						&lt;li&gt;4 oz. grilled chicken breast&lt;/li&gt;
+						&lt;li&gt;1/2 cup sliced strawberries&lt;/li&gt;
+						&lt;li&gt;1/2 cup steamed spinach w/ salt and pepper&lt;/li&gt;
+						&lt;li&gt;1/2 cup brown rice, steamed&lt;/li&gt;
+					&lt;/ul&gt;
+				&lt;/div&gt;
+			&lt;/div&gt;
+			&lt;a href="blog.html" class="custom-btn text-center green"&gt;order now&lt;/a&gt;
+		&lt;/div&gt;&lt;!--inside--&gt;
+	&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;!--schedule--&gt;
+		</pre>
+		<h6>Before &lt;/body&gt; tag ends:</h6>
+		<pre style="font-size:12px;">
+			&lt;script src="js/main.js"&gt;&lt;/script&gt;
+		</pre>
+		<hr>
+	</div>
+	<div class="content-block">
+		<h3 id="search-cart"><strong>Shop With Sidebar</strong></h3>
+		<img src="assets/images/search.jpg">
+		<h6>HTML:</h6>
+<pre>
+&lt;div class="content-product grid masonry"&gt;
+	&lt;div class="product mask down grid-item grid-item-width1 grid-item-height-mini"&gt;
+		&lt;div class="images text-center"&gt;
+			&lt;a href="single-product.html"&gt;&lt;img src="assets/images/product5.png" alt="product5"&gt;&lt;/a&gt;
+			&lt;div class="button-group"&gt;
+				&lt;a href="cart.html" class="custom-btn pink"&gt;&lt;i class="fa fa-shopping-bag"&gt;&lt;/i&gt;&lt;/a&gt;
+				&lt;a href="#" class="custom-btn pink"&gt;&lt;i class="fa fa-search"&gt;&lt;/i&gt;&lt;/a&gt;
+			&lt;/div&gt;&lt;!--button-group--&gt;
+		&lt;/div&gt;&lt;!--images--&gt;
+		&lt;div class="info-product"&gt;
+			&lt;a href="single-product.html" class="title"&gt;ORS - Olive Oil&lt;/a&gt;
+			&lt;span class="price"&gt;$9.99&lt;/span&gt;
+		&lt;/div&gt;&lt;!--info-product--&gt;
+	&lt;/div&gt;&lt;!--product--&gt;
+	&lt;div class="product mask down grid-item grid-item-width1 grid-item-height-mini"&gt;
+		&lt;div class="images text-center"&gt;
+			&lt;a href="single-product.html"&gt;&lt;img src="assets/images/product12.png" alt="product5"&gt;&lt;/a&gt;
+			&lt;div class="button-group"&gt;
+				&lt;a href="cart.html" class="custom-btn pink"&gt;&lt;i class="fa fa-shopping-bag"&gt;&lt;/i&gt;&lt;/a&gt;
+				&lt;a href="#" class="custom-btn pink"&gt;&lt;i class="fa fa-search"&gt;&lt;/i&gt;&lt;/a&gt;
+			&lt;/div&gt;&lt;!--button-group--&gt;
+		&lt;/div&gt;&lt;!--images--&gt;
+		&lt;div class="info-product"&gt;
+			&lt;a href="single-product.html" class="title"&gt;Organic - Agave Five&lt;/a&gt;
+			&lt;span class="price"&gt;
+				&lt;del&gt;$9.99&lt;/del&gt;
+				&lt;ins&gt;$6.99&lt;/ins&gt;
+			&lt;/span&gt;
+		&lt;/div&gt;&lt;!--info-product--&gt;
+	&lt;/div&gt;&lt;!--product--&gt;
+	&lt;div class="product mask down grid-item grid-item-width2 grid-item-height"&gt;
+		&lt;div class="images text-center"&gt;
+			&lt;a href="single-product.html"&gt;&lt;img src="assets/images/organicgirl-romaine-7oz.png" alt="product5"&gt;&lt;/a&gt;
+			&lt;div class="button-group"&gt;
+				&lt;a href="cart.html" class="custom-btn pink"&gt;&lt;i class="fa fa-shopping-bag"&gt;&lt;/i&gt;&lt;/a&gt;
+				&lt;a href="#" class="custom-btn pink"&gt;&lt;i class="fa fa-search"&gt;&lt;/i&gt;&lt;/a&gt;
+			&lt;/div&gt;&lt;!--button-group--&gt;
+		&lt;/div&gt;&lt;!--images--&gt;
+		&lt;div class="info-product"&gt;
+			&lt;a href="single-product.html" class="title"&gt;Organic Girl - Romanie&lt;/a&gt;
+			&lt;span class="price"&gt;$4.79&lt;/span&gt;
+		&lt;/div&gt;&lt;!--info-product--&gt;
+		&lt;div class="label-product text-center text-white sale"&gt;
+			&lt;span&gt;Sale&lt;/span&gt;
+		&lt;/div&gt;
+	&lt;/div&gt;&lt;!--product--&gt;
+	&lt;div class="product mask down grid-item grid-item-width1 grid-item-height-mini"&gt;
+		&lt;div class="images text-center"&gt;
+			&lt;a href="single-product.html"&gt;&lt;img src="assets/images/product8.png" alt="product5"&gt;&lt;/a&gt;
+			&lt;div class="button-group"&gt;
+				&lt;a href="cart.html" class="custom-btn pink"&gt;&lt;i class="fa fa-shopping-bag"&gt;&lt;/i&gt;&lt;/a&gt;
+				&lt;a href="#" class="custom-btn pink"&gt;&lt;i class="fa fa-search"&gt;&lt;/i&gt;&lt;/a&gt;
+			&lt;/div&gt;&lt;!--button-group--&gt;
+		&lt;/div&gt;&lt;!--images--&gt;
+		&lt;div class="info-product"&gt;
+			&lt;a href="single-product.html" class="title"&gt;Beech Nut - Just Pumpkin &lt;/a&gt;
+			&lt;span class="price"&gt;$9.69&lt;/span&gt;
+		&lt;/div&gt;&lt;!--info-product--&gt;
+	&lt;/div&gt;&lt;!--product--&gt;
+	&lt;div class="product mask down grid-item grid-item-width1 grid-item-height-mini"&gt;
+		&lt;div class="images text-center"&gt;
+			&lt;a href="single-product.html"&gt;&lt;img src="assets/images/product9.png" alt="product5"&gt;&lt;/a&gt;
+			&lt;div class="button-group"&gt;
+				&lt;a href="cart.html" class="custom-btn pink"&gt;&lt;i class="fa fa-shopping-bag"&gt;&lt;/i&gt;&lt;/a&gt;
+				&lt;a href="#" class="custom-btn pink"&gt;&lt;i class="fa fa-search"&gt;&lt;/i&gt;&lt;/a&gt;
+			&lt;/div&gt;&lt;!--button-group--&gt;
+		&lt;/div&gt;&lt;!--images--&gt;
+		&lt;div class="info-product"&gt;
+			&lt;a href="single-product.html" class="title"&gt;Detox Zero&lt;/a&gt;
+			&lt;span class="price"&gt;$16.99&lt;/span&gt;
+		&lt;/div&gt;&lt;!--info-product--&gt;
+	&lt;/div&gt;&lt;!--product--&gt;
+&lt;/div&gt;
+&lt;div class="content-product grid masonry"&gt;
+	&lt;div class="product mask down grid-item grid-item-width1 grid-item-height-mini"&gt;
+		&lt;div class="images text-center"&gt;
+			&lt;a href="single-product.html"&gt;&lt;img src="assets/images/product1.png" alt="product5"&gt;&lt;/a&gt;
+			&lt;div class="button-group"&gt;
+				&lt;a href="cart.html" class="custom-btn pink"&gt;&lt;i class="fa fa-shopping-bag"&gt;&lt;/i&gt;&lt;/a&gt;
+				&lt;a href="#" class="custom-btn pink"&gt;&lt;i class="fa fa-search"&gt;&lt;/i&gt;&lt;/a&gt;
+			&lt;/div&gt;&lt;!--button-group--&gt;
+		&lt;/div&gt;&lt;!--images--&gt;
+		&lt;div class="info-product"&gt;
+			&lt;a href="single-product.html" class="title"&gt;Daiya - Cheddar &lt;/a&gt;
+			&lt;span class="price"&gt;$20&lt;/span&gt;
+		&lt;/div&gt;&lt;!--info-product--&gt;
+	&lt;/div&gt;&lt;!--product--&gt;
+	&lt;div class="product mask down grid-item grid-item-width2 grid-item-height"&gt;
+		&lt;div class="images text-center"&gt;
+			&lt;a href="single-product.html"&gt;&lt;img src="assets/images/almondmilk.png" alt="product5"&gt;&lt;/a&gt;
+			&lt;div class="button-group"&gt;
+				&lt;a href="cart.html" class="custom-btn pink"&gt;&lt;i class="fa fa-shopping-bag"&gt;&lt;/i&gt;&lt;/a&gt;
+				&lt;a href="#" class="custom-btn pink"&gt;&lt;i class="fa fa-search"&gt;&lt;/i&gt;&lt;/a&gt;
+			&lt;/div&gt;&lt;!--button-group--&gt;
+		&lt;/div&gt;&lt;!--images--&gt;
+		&lt;div class="info-product"&gt;
+			&lt;a href="single-product.html" class="title"&gt;Mooala Original&lt;/a&gt;
+			&lt;span class="price"&gt;$10.99&lt;/span&gt;
+		&lt;/div&gt;&lt;!--info-product--&gt;
+		&lt;div class="label-product text-center text-white new"&gt;
+			&lt;span&gt;new&lt;/span&gt;
+		&lt;/div&gt;
+	&lt;/div&gt;&lt;!--product--&gt;
+	&lt;div class="product mask down grid-item grid-item-width1 grid-item-height-mini"&gt;
+		&lt;div class="images text-center"&gt;
+			&lt;a href="single-product.html"&gt;&lt;img src="assets/images/product2.png" alt="product5"&gt;&lt;/a&gt;
+			&lt;div class="button-group"&gt;
+				&lt;a href="cart.html" class="custom-btn pink"&gt;&lt;i class="fa fa-shopping-bag"&gt;&lt;/i&gt;&lt;/a&gt;
+				&lt;a href="#" class="custom-btn pink"&gt;&lt;i class="fa fa-search"&gt;&lt;/i&gt;&lt;/a&gt;
+			&lt;/div&gt;&lt;!--button-group--&gt;
+		&lt;/div&gt;&lt;!--images--&gt;
+		&lt;div class="info-product"&gt;
+			&lt;a href="single-product.html" class="title"&gt;Vegan Burger - Veggie Mix&lt;/a&gt;
+			&lt;span class="price"&gt;$9.99&lt;/span&gt;
+		&lt;/div&gt;&lt;!--info-product--&gt;
+	&lt;/div&gt;&lt;!--product--&gt;
+	&lt;div class="product mask down grid-item grid-item-width1 grid-item-height-mini"&gt;
+		&lt;div class="images text-center"&gt;
+			&lt;a href="single-product.html"&gt;&lt;img src="assets/images/product3.png" alt="product5"&gt;&lt;/a&gt;
+			&lt;div class="button-group"&gt;
+				&lt;a href="cart.html" class="custom-btn pink"&gt;&lt;i class="fa fa-shopping-bag"&gt;&lt;/i&gt;&lt;/a&gt;
+				&lt;a href="#" class="custom-btn pink"&gt;&lt;i class="fa fa-search"&gt;&lt;/i&gt;&lt;/a&gt;
+			&lt;/div&gt;&lt;!--button-group--&gt;
+		&lt;/div&gt;&lt;!--images--&gt;
+		&lt;div class="info-product"&gt;
+			&lt;a href="single-product.html" class="title"&gt;Vegan Protein&lt;/a&gt;
+			&lt;span class="price"&gt;$50&lt;/span&gt;
+		&lt;/div&gt;&lt;!--info-product--&gt;
+	&lt;/div&gt;&lt;!--product--&gt;
+	&lt;div class="product mask down grid-item grid-item-width1 grid-item-height-mini"&gt;
+		&lt;div class="images text-center"&gt;
+			&lt;a href="single-product.html"&gt;&lt;img src="assets/images/product16.png" alt="product5"&gt;&lt;/a&gt;
+			&lt;div class="button-group"&gt;
+				&lt;a href="cart.html" class="custom-btn pink"&gt;&lt;i class="fa fa-shopping-bag"&gt;&lt;/i&gt;&lt;/a&gt;
+				&lt;a href="#" class="custom-btn pink"&gt;&lt;i class="fa fa-search"&gt;&lt;/i&gt;&lt;/a&gt;
+			&lt;/div&gt;&lt;!--button-group--&gt;
+		&lt;/div&gt;&lt;!--images--&gt;
+		&lt;div class="info-product"&gt;
+			&lt;a href="single-product.html" class="title"&gt;Organic Orange&lt;/a&gt;
+			&lt;span class="price"&gt;$6.99&lt;/span&gt;
+		&lt;/div&gt;&lt;!--info-product--&gt;
+	&lt;/div&gt;&lt;!--product--&gt;
+	&lt;div class="product mask down grid-item grid-item-width1 grid-item-height-mini"&gt;
+		&lt;div class="images text-center"&gt;
+			&lt;a href="single-product.html"&gt;&lt;img src="assets/images/product17.png" alt="product5"&gt;&lt;/a&gt;
+			&lt;div class="button-group"&gt;
+				&lt;a href="cart.html" class="custom-btn pink"&gt;&lt;i class="fa fa-shopping-bag"&gt;&lt;/i&gt;&lt;/a&gt;
+				&lt;a href="#" class="custom-btn pink"&gt;&lt;i class="fa fa-search"&gt;&lt;/i&gt;&lt;/a&gt;
+			&lt;/div&gt;&lt;!--button-group--&gt;
+		&lt;/div&gt;&lt;!--images--&gt;
+		&lt;div class="info-product"&gt;
+			&lt;a href="single-product.html" class="title"&gt;Purity Organic&lt;/a&gt;
+			&lt;span class="price"&gt;$4.79&lt;/span&gt;
+		&lt;/div&gt;&lt;!--info-product--&gt;
+	&lt;/div&gt;&lt;!--product--&gt;
+	&lt;div class="product mask down grid-item grid-item-width1 grid-item-height-mini"&gt;
+		&lt;div class="images text-center"&gt;
+			&lt;a href="single-product.html"&gt;&lt;img src="assets/images/product18.png" alt="product5"&gt;&lt;/a&gt;
+			&lt;div class="button-group"&gt;
+				&lt;a href="cart.html" class="custom-btn pink"&gt;&lt;i class="fa fa-shopping-bag"&gt;&lt;/i&gt;&lt;/a&gt;
+				&lt;a href="#" class="custom-btn pink"&gt;&lt;i class="fa fa-search"&gt;&lt;/i&gt;&lt;/a&gt;
+			&lt;/div&gt;&lt;!--button-group--&gt;
+		&lt;/div&gt;&lt;!--images--&gt;
+		&lt;div class="info-product"&gt;
+			&lt;a href="single-product.html" class="title"&gt;Cold Pressed Juice&lt;/a&gt;
+			&lt;span class="price"&gt;$9.99&lt;/span&gt;
+		&lt;/div&gt;&lt;!--info-product--&gt;
+	&lt;/div&gt;&lt;!--product--&gt;
+	&lt;div class="product mask down grid-item grid-item-width1 grid-item-height-mini"&gt;
+		&lt;div class="images text-center"&gt;
+			&lt;a href="single-product.html"&gt;&lt;img src="assets/images/product15.png" alt="product5"&gt;&lt;/a&gt;
+			&lt;div class="button-group"&gt;
+				&lt;a href="cart.html" class="custom-btn pink"&gt;&lt;i class="fa fa-shopping-bag"&gt;&lt;/i&gt;&lt;/a&gt;
+				&lt;a href="#" class="custom-btn pink"&gt;&lt;i class="fa fa-search"&gt;&lt;/i&gt;&lt;/a&gt;
+			&lt;/div&gt;&lt;!--button-group--&gt;
+		&lt;/div&gt;&lt;!--images--&gt;
+		&lt;div class="info-product"&gt;
+			&lt;a href="single-product.html" class="title"&gt;Organic Nutrition Shake&lt;/a&gt;
+			&lt;span class="price"&gt;$5.79&lt;/span&gt;
+		&lt;/div&gt;&lt;!--info-product--&gt;
+	&lt;/div&gt;&lt;!--product--&gt;
+	&lt;div class="product mask down grid-item grid-item-width1 grid-item-height-mini"&gt;
+		&lt;div class="images text-center"&gt;
+			&lt;a href="single-product.html"&gt;&lt;img src="assets/images/product19.png" alt="product5"&gt;&lt;/a&gt;
+			&lt;div class="button-group"&gt;
+				&lt;a href="cart.html" class="custom-btn pink"&gt;&lt;i class="fa fa-shopping-bag"&gt;&lt;/i&gt;&lt;/a&gt;
+				&lt;a href="#" class="custom-btn pink"&gt;&lt;i class="fa fa-search"&gt;&lt;/i&gt;&lt;/a&gt;
+			&lt;/div&gt;&lt;!--button-group--&gt;
+		&lt;/div&gt;&lt;!--images--&gt;
+		&lt;div class="info-product"&gt;
+			&lt;a href="single-product.html" class="title"&gt;Fruit Punch&lt;/a&gt;
+			&lt;span class="price"&gt;$8.99&lt;/span&gt;
+		&lt;/div&gt;&lt;!--info-product--&gt;
+	&lt;/div&gt;&lt;!--product--&gt;
+&lt;/div&gt;
+</pre>
+	<h6>Before &lt;/body&gt; tag ends:</h6>
+	<pre style="font-size:12px;">
+		&lt;script src="js/lib/masonry.pkgd.min.js.js"&gt;&lt;/script&gt;
+	</pre>
+	<h6>Initialize masonry in main.js file</h6>
+	<pre>
+		$('.grid').masonry({
+			itemSelector: '.grid-item'
+		});
+	</pre>
+		<hr>
+	</div>
+	<div class="content-block">
+		<h3 id="product"><strong>Blog Post</strong></h3>
+		<img src="assets/images/product.jpg">
+		<h6>HTML:</h6>
+<pre style="font-size:12px;">
+&lt;article class="post gallery-post border-bottom border-color-gray"&gt;
+	&lt;div class="wp-picture"&gt;
+		&lt;div class="gallery owl-carousel owl-theme"&gt;
+			&lt;div class="item"&gt;
+				&lt;img src="assets/images/blog-post.jpg" alt="slider"&gt;
+			&lt;/div&gt;&lt;!--item--&gt;
+			&lt;div class="item"&gt;
+				&lt;img src="assets/images/blog-post.jpg" alt="slider"&gt;
+			&lt;/div&gt;&lt;!--item--&gt;
+			&lt;div class="item"&gt;
+				&lt;img src="assets/images/blog-post.jpg" alt="slider"&gt;
+			&lt;/div&gt;&lt;!--item--&gt;
+		&lt;/div&gt;&lt;!--gallery--&gt;
+	&lt;/div&gt;&lt;!--wp-picture--&gt;
+	&lt;div class="content-article text-center"&gt;
+		&lt;h2 class="post-heading"&gt;
+			&lt;a href="single-blog.html"&gt;Tea Time: The health reasons why you should&lt;/a&gt;
+		&lt;/h2&gt;
+		&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor&lt;br&gt;incididunt ut labore et dolore magna aliqua...&lt;/p&gt;
+		&lt;div class="category"&gt;
+			&lt;span&gt;in&lt;/span&gt;&lt;a href="single-blog.html"&gt;NUTRITION + WELLNESS / &lt;/a&gt;&lt;a href="#"&gt;September 05, 2017&lt;/a&gt;
+		&lt;/div&gt;&lt;!--category--&gt;
+	&lt;/div&gt;&lt;!--content-article--&gt;
+&lt;/article&gt;
+</pre>
+		<hr>
+	</div>
+	<div class="content-block">
+		<h3 id="banner"><strong>Banner</strong></h3>
+		<img src="assets/images/banner.jpg" alt="banner">
+		<h6>HTML:</h6>
+	<pre style="font-size:12px;">
+&lt;div class="banner-img"&gt;
+	&lt;div class="row"&gt;
+		&lt;div class="col-md-6"&gt;
+			&lt;img src="assets/images/banner.jpg" alt="banner"&gt;
+			&lt;div class="inside text-right"&gt;
+				&lt;h2 class="text-black"&gt;gift Certificate&lt;/h2&gt;
+				&lt;p&gt;Give the perfect gift every time&lt;/p&gt;
+				&lt;a href="blog.html" class="custom-btn text-center white"&gt;Read More&lt;/a&gt;
+			&lt;/div&gt;&lt;!--inside--&gt;
+		&lt;/div&gt;
+		&lt;div class="col-md-6"&gt;
+			&lt;img src="assets/images/banner2.jpg" alt="banner"&gt;
+			&lt;div class="inside text-right"&gt;
+				&lt;h2 class="text-black"&gt;Fresh Fruits&lt;/h2&gt;
+				&lt;p&gt;100% freshness guarantee &lt;/p&gt;
+				&lt;a href="blog.html" class="custom-btn text-center white"&gt;Read More&lt;/a&gt;
+			&lt;/div&gt;&lt;!--inside--&gt;
+		&lt;/div&gt;
+	&lt;/div&gt;
+&lt;/div&gt;
+	</pre>
+		<hr>
+	</div>
+	<div class="content-block">
+		<h3 id="post"><strong>Single Product</strong></h3>
+		<br>
+	<p>
+		<img src="assets/images/post.jpg">
+	</p>
+	<pre>
+&lt;div class="row"&gt;
+  &lt;div class="col-md-6"&gt;
+  	&lt;!--================= Single Product Slider  ====================--&gt;
+  	&lt;div class="single-product-slider"&gt;
+  	  &lt;div class="product-slider-shop owl-carousel owl-theme"&gt;
+  	  	&lt;div class="item"&gt;&lt;img src="assets/images/single-product.jpg" alt="single-product"&gt;&lt;/div&gt;
+  	  	&lt;div class="item"&gt;&lt;img src="assets/images/single-product.jpg" alt="single-product"&gt;&lt;/div&gt;
+  	  	&lt;div class="item"&gt;&lt;img src="assets/images/single-product.jpg" alt="single-product"&gt;&lt;/div&gt;
+  	  	&lt;div class="item"&gt;&lt;img src="assets/images/single-product.jpg" alt="single-product"&gt;&lt;/div&gt;
+  	  	&lt;div class="item"&gt;&lt;img src="assets/images/single-product.jpg" alt="single-product"&gt;&lt;/div&gt;
+  	  	&lt;div class="item"&gt;&lt;img src="assets/images/single-product.jpg" alt="single-product"&gt;&lt;/div&gt;
+  	  &lt;/div&gt;
+  	  &lt;div class="thumbnail owl-carousel owl-theme"&gt;
+  	  	&lt;div class="item"&gt;&lt;img src="assets/images/single-product-mini.jpg" alt="product"&gt;&lt;/div&gt;
+  	  	&lt;div class="item"&gt;&lt;img src="assets/images/single-product-mini.jpg" alt="product"&gt;&lt;/div&gt;
+  	  	&lt;div class="item"&gt;&lt;img src="assets/images/single-product-mini.jpg" alt="product"&gt;&lt;/div&gt;
+  	  	&lt;div class="item"&gt;&lt;img src="assets/images/single-product-mini.jpg" alt="product"&gt;&lt;/div&gt;
+  	  	&lt;div class="item"&gt;&lt;img src="assets/images/single-product-mini.jpg" alt="product"&gt;&lt;/div&gt;
+  	  	&lt;div class="item"&gt;&lt;img src="assets/images/single-product-mini.jpg" alt="product"&gt;&lt;/div&gt;
+  	  &lt;/div&gt;
+  	  &lt;div class="zoom" data-toggle="modal" data-target="#zoom-modal"&gt;
+  	  	&lt;img src="assets/images/zoom.png" alt="zoom"&gt;
+  	  &lt;/div&gt;
+  	&lt;/div&gt;
+  	&lt;!--================= End of Single Product Slider  ====================--&gt;
+  	&lt;div class="modal fade" id="zoom-modal" tabindex="-1" role="dialog"&gt;
+  	  &lt;div class="modal-dialog" role="document"&gt;
+  	  	&lt;div class="modal-content"&gt;
+  	  	  &lt;div class="modal-header"&gt;
+  	  	  	&lt;button type="button" class="close" data-dismiss="modal" aria-label="Close"&gt;
+  	  	  	&lt;span aria-hidden="true"&gt;&times;&lt;/span&gt;&lt;/button&gt;
+  	  	  &lt;/div&gt;
+  	  	  &lt;div class="modal-body"&gt;
+  	  	  	&lt;div id="carousel" class="carousel slide" data-ride="carousel"&gt;
+  	  	  	  &lt;div class="carousel-inner"&gt;
+  	  	  	   &lt;div class="item active"&gt;
+  	  	  	   	&lt;img src="assets/images/single-product.jpg" alt="single"&gt;
+  	  	  	   &lt;/div&gt;&lt;!--item--&gt;
+  	  	  	   &lt;div class="item"&gt;
+  	  	  	   	&lt;img src="assets/images/single-product.jpg" alt="single"&gt;
+  	  	  	   &lt;/div&gt;&lt;!--item--&gt;
+  	  	  	   &lt;div class="item"&gt;
+  	  	  	   	&lt;img src="assets/images/single-product.jpg" alt="single"&gt;
+  	  	  	   &lt;/div&gt;&lt;!--item--&gt;
+  	  	  	   &lt;div class="item"&gt;
+  	  	  	   	&lt;img src="assets/images/single-product.jpg" alt="single"&gt;
+  	  	  	   &lt;/div&gt;&lt;!--item--&gt;
+  	  	  	   &lt;div class="item"&gt;
+  	  	  	   	&lt;img src="assets/images/single-product.jpg" alt="single"&gt;
+  	  	  	   &lt;/div&gt;&lt;!--item--&gt;
+  	  	  	   &lt;div class="item"&gt;
+  	  	  	   	&lt;img src="assets/images/single-product.jpg" alt="single"&gt;
+  	  	  	   &lt;/div&gt;&lt;!--item--&gt;
+  	  	  	   &lt;div class="item"&gt;
+  	  	  	   	&lt;img src="assets/images/single-product.jpg" alt="single"&gt;
+  	  	  	   &lt;/div&gt;&lt;!--item--&gt;
+  	  	  	   &lt;div class="item"&gt;
+  	  	  	   	&lt;img src="assets/images/single-product.jpg" alt="single"&gt;
+  	  	  	   &lt;/div&gt;&lt;!--item--&gt;
+  	  	  	  &lt;/div&gt;&lt;!--carousel-inner--&gt;
+  	  	  	&lt;/div&gt;&lt;!--carousel--&gt;
+  	  	  	&lt;div id="thumbcarousel" class="carousel slide" data-interval="false"&gt;
+  	  	  	 &lt;div class="carousel-inner"&gt;
+  	  	  	   &lt;div class="item active"&gt;
+  	  	  	   	&lt;div data-target="#carousel" data-slide-to="0" class="thumb"&gt;
+  	  	  	   		&lt;img src="assets/images/single-product-mini.jpg" alt="product"&gt;
+  	  	  	   	&lt;/div&gt;
+  	  	  	   	&lt;div data-target="#carousel" data-slide-to="1" class="thumb"&gt;
+  	  	  	   		&lt;img src="assets/images/single-product-mini.jpg" alt="product"&gt;
+  	  	  	   	&lt;/div&gt;
+  	  	  	   	&lt;div data-target="#carousel" data-slide-to="2" class="thumb"&gt;
+  	  	  	   		&lt;img src="assets/images/single-product-mini.jpg" alt="product"&gt;
+  	  	  	   	&lt;/div&gt;
+  	  	  	   	&lt;div data-target="#carousel" data-slide-to="3" class="thumb"&gt;
+  	  	  	   		&lt;img src="assets/images/single-product-mini.jpg" alt="product"&gt;
+  	  	  	   	&lt;/div&gt;
+  	  	  	   &lt;/div&gt;&lt;!--item--&gt;
+  	  	  	   &lt;div class="item"&gt;
+  	  	  	   	&lt;div data-target="#carousel" data-slide-to="4" class="thumb"&gt;
+  	  	  	   		&lt;img src="assets/images/single-product-mini.jpg" alt="product"&gt;
+  	  	  	   	&lt;/div&gt;
+  	  	  	   	&lt;div data-target="#carousel" data-slide-to="5" class="thumb"&gt;
+  	  	  	   		&lt;img src="assets/images/single-product-mini.jpg" alt="product"&gt;
+  	  	  	   	&lt;/div&gt;
+  	  	  	   	&lt;div data-target="#carousel" data-slide-to="6" class="thumb"&gt;
+  	  	  	   		&lt;img src="assets/images/single-product-mini.jpg" alt="product"&gt;
+  	  	  	   	&lt;/div&gt;
+  	  	  	   	&lt;div data-target="#carousel" data-slide-to="7" class="thumb"&gt;
+  	  	  	   		&lt;img src="assets/images/single-product-mini.jpg" alt="product"&gt;
+  	  	  	   	&lt;/div&gt;
+  	  	  	   &lt;/div&gt;
+  	  	  	 &lt;/div&gt;&lt;!--carousel-inne--&gt;
+  	  	  	 &lt;a class="left carousel-control" href="#thumbcarousel" role="button" data-slide="prev"&gt;
+  	  	  	 &lt;i class="fa fa-angle-left"&gt;&lt;/i&gt;&lt;/a&gt;
+  	  	  	 &lt;a class="right carousel-control" href="#thumbcarousel" role="button" data-slide="next"&gt;
+  	  	  	 &lt;i class="fa fa-angle-right"&gt;&lt;/i&gt;&lt;/a&gt;
+  	  	  	&lt;/div&gt;&lt;!--thumbcarousel--&gt;
+  	  	  &lt;/div&gt;&lt;!--modal-body--&gt;
+  	  	&lt;/div&gt;&lt;!--modal-content--&gt;
+  	  &lt;/div&gt;&lt;!--modal-dialog--&gt;
+  	&lt;/div&gt;&lt;!--modal--&gt;
+  &lt;/div&gt;
+  &lt;div class="col-md-6"&gt;
+  	&lt;!--================= Inside Single  ====================--&gt;
+  	&lt;div class="inside-single"&gt;
+  	  &lt;div class="price"&gt;$9.99&lt;/div&gt;
+  	  &lt;div class="star"&gt;
+  	  	&lt;span&gt;
+  	  	  &lt;i class="fa fa-star"&gt;&lt;/i&gt;
+  	  	  &lt;i class="fa fa-star"&gt;&lt;/i&gt;
+  	  	  &lt;i class="fa fa-star"&gt;&lt;/i&gt;
+  	  	  &lt;i class="fa fa-star"&gt;&lt;/i&gt;
+  	  	  &lt;i class="fa fa-star"&gt;&lt;/i&gt;
+  	  	&lt;/span&gt;
+  	  	&lt;a href="#"&gt;(4 customer reviews)&lt;/a&gt;
+  	  &lt;/div&gt;&lt;!--star--&gt;
+  	  &lt;div class="description"&gt;
+  	  	&lt;p&gt;Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore 
+  	  	eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa
+  	  	 qui officia.&lt;/p&gt;
+  	  &lt;/div&gt;&lt;!--description--&gt;
+  	  &lt;div class="add-to-cart"&gt;
+  	  	&lt;div class="quantity"&gt;
+  	  	  &lt;span class="minus"&gt;&lt;img src="assets/images/minus.png" alt="minus"&gt;&lt;/span&gt;
+  	  	  &lt;input value="1" size="5"&gt;
+  	  	  &lt;span class="plus"&gt;&lt;img src="assets/images/plus.png" alt="plus"&gt;&lt;/span&gt;
+  	  	&lt;/div&gt;
+  	  	&lt;a href="cart.html" class="custom-btn green"&gt;add to bag&lt;/a&gt;
+  	  &lt;/div&gt;&lt;!--add-to-cart--&gt;
+  	  &lt;ul&gt;
+  	  	&lt;li&gt;Categories:&lt;a href="#"&gt;Oil&lt;/a&gt;&lt;/li&gt;
+  	  	&lt;li&gt;Tags:&lt;a href="#"&gt;Oil,&lt;/a&gt;&lt;a href="#"&gt;Organic,&lt;/a&gt;&lt;a href="#"&gt;Health&lt;/a&gt;&lt;/li&gt;
+  	  	&lt;li&gt;Share:
+  	  	  &lt;ul class="social-icon"&gt;
+  	  	  	&lt;li class="facebook"&gt;&lt;a href="#"&gt;&lt;i class="fa fa-facebook"&gt;&lt;/i&gt;&lt;/a&gt;&lt;/li&gt;
+  	  	  	&lt;li class="google"&gt;&lt;a href="#"&gt;&lt;i class="fa fa-google-plus"&gt;&lt;/i&gt;&lt;/a&gt;&lt;/li&gt;
+  	  	  	&lt;li class="tumblr"&gt;&lt;a href="#"&gt;&lt;i class="fa fa-tumblr"&gt;&lt;/i&gt;&lt;/a&gt;&lt;/li&gt;
+  	  	  	&lt;li class="instagram"&gt;&lt;a href="#"&gt;&lt;i class="fa fa-instagram"&gt;&lt;/i&gt;&lt;/a&gt;&lt;/li&gt;
+  	  	  &lt;/ul&gt;&lt;!--social-icon--&gt;
+  	  	&lt;/li&gt;
+  	  &lt;/ul&gt;
+  	&lt;/div&gt;
+  	&lt;!--================= End of Inside Single  ====================--&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+	</pre>
+		<hr>
+	</div>
+	<div class="content-block">
+			<h3 id="contact-form"><strong>Contact Form</strong></h3>
+			<br>
+		<p>
+			<img src="assets/images/form.jpg">
+		</p>
+		<pre>
+&lt;form id="contact-us-form"&gt;
+  &lt;div&gt;
+  	&lt;input type="text" name="contact-us-name" class="contact-us-input-one" placeholder="Your Name"&gt;
+  	&lt;input type="text" name="contact-us-email"  class="contact-us-input-two" placeholder="Your E-mail"&gt;
+  &lt;/div&gt;
+  &lt;div&gt;
+  	&lt;textarea name="contact-us-massage" class="contact-us-massage"  placeholder="Your Message..."&gt;&lt;/textarea&gt;
+  &lt;/div&gt;
+  &lt;div&gt;
+  	&lt;button type="submit" class="custom-btn green"&gt;submit&lt;/button&gt;
+  &lt;/div&gt;
+&lt;/form&gt;
+		</pre>
+	</div>
+
+
+	<div class="content-block">
+	<h3 id="sources-and-credits"><strong>Sources and Credits</strong><a class="back2top" href="#top">top</a></h3>
+		<br>
+	<ul>
+		<li>Bootstrap Framework – <a href="https://getbootstrap.com/" target="_blank">https://getbootstrap.com/</a></li>
+		<li>OwlCarousel - <a href="https://owlcarousel2.github.io/OwlCarousel2" target="_blank">https://owlcarousel2.github.io/OwlCarousel2</a></li>
+		<li>Jquery - <a href="https://jquery.com/" target="_blank">https://jquery.com/</a></li>
+		<li>Google fonts – <a href="https://www.google.com/fonts" target="_blank">https://www.google.com/fonts</a></li>
+		<li>Slick – <a href="http://kenwheeler.github.io/slick/" target="_blank">http://kenwheeler.github.io/slick/</a></li>
+		<li>Masonry – <a href="https://github.com/desandro/masonry" target="_blank">https://github.com/desandro/masonry</a></li>
+		<li>Jquery Ui – <a href="https://jqueryui.com/" target="_blank">https://jqueryui.com/</a></li>
+		<li>lazyYT – <a href="https://github.com/tylerpearson/lazyYT" target="_blank">https://github.com/tylerpearson/lazyYT</a></li>
+		<li>Jquery Filterizr – <a href="https://github.com/giotiskl/Filterizr" target="_blank">https://github.com/giotiskl/Filterizr</a></li>
+		<li>Jquery Counterup – <a href="https://github.com/bfintal/Counter-Up" target="_blank">https://github.com/bfintal/Counter-Up</a></li>
+		<li>TweenMax – <a href="https://greensock.com/tweenmax" target="_blank">https://greensock.com/tweenmax</a></li>
+		<li>Waypoints – <a href="http://imakewebthings.com/waypoints/" target="_blank">http://imakewebthings.com/waypoints/</a></li>
+	</ul>
+		<hr class="space">
+	</div>
+	<div class="content-block">
+			<h3 id="contacts"><strong>Contacts</strong></h3></a>
+			<br>
+			
+			<div>
+				<p class="prepend-top">
+					<strong>
+						Created: 2018<br>
+					By: Fruitful code<br>
+					Email: <a href="mailto:mail@fruitfulcode.com">mail@fruitfulcode.com</a>
+					</strong>
+				</p>
+			</div><!-- end div .span-6 -->   
+			  <div class="span-12 last">
+				<p class="prepend-top append-0">Thank you for purchasing our theme. If you have any questions that are beyond the scope of this help file, please feel free to email via my user page contact form <a href="http://themeforest.net/user/fruitfulcode" target="blank">here</a>. Thanks so much!</p>
+		</div>   
+		  
+		</div>
+
+	</div>
+</div><!-- end div .container -->
+</body>
+</html>
