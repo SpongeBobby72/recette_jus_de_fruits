@@ -179,9 +179,9 @@
 <!--===================== Base-Slider ========================-->
 <div class="base-slider owl-carousel owl-theme">
     <div class="item">
-        <img src="http://via.placeholder.com/1920x760" alt="slider">
+        <img src="images/mojito.jpg" alt="slider">
         <div class="text-slider">
-            <h2>Nature has always<br>cared for us!</h2>
+            <h2>La nature a toujours<br>pris soin de nous!</h2>
             <a href="#" class="custom-btn text-center yellow">top tips</a>
         </div><!--text-slider-->
     </div><!--item-->
