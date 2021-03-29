@@ -18,6 +18,7 @@
     <link rel="stylesheet" type="text/css" href="themes/front-theme/HTML/assets/css/style.css">
     <!-- Responsive Theme -->
     <link rel="stylesheet" type="text/css" href="themes/front-theme/HTML/assets/css/responsive.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 <div class="wrapper">
@@ -186,23 +187,18 @@
         </div><!--text-slider-->
     </div><!--item-->
     <div class="item slide-two">
-        <img src="http://via.placeholder.com/1920x760" alt="slider">
+        <img src="images/herbs-3809512_1920.jpg" alt="slider">
         <div class="text-slider">
-            <h2>Organic pancakes<br>homestyle</h2>
-            <span class="price">12.99$</span>
+            <h2>Jus de fruits<br>bio</h2>
+            <span class="price">12.99€</span>
             <a href="#" class="custom-btn text-center yellow">top tips</a>
         </div><!--text-slider-->
     </div><!--item-->
     <div class="item slide-three">
-        <img src="http://via.placeholder.com/1920x760" alt="slider">
+        <img src="images/detox-1995433_1920.jpg" alt="slider">
         <div class="text-slider last">
-            <h2>One day sale!<br>large avocados<span class="text-pink">for $5</span></h2>
-            <div id="countdown">
-                <div><span class="hours">00</span><span class="text">hrs</span></div>
-                <div><span class="minutes">00</span><span class="text">min</span></div>
-                <div><span class="seconds">00</span><span class="text">sec</span></div>
-            </div>
-            <a href="#" class="custom-btn green text-center">top tips</a>
+            <h2>Un large choix de jus de légumes<br><span class="text-pink">17€</span></h2>
+            <a href="#" class="custom-btn green text-center">Nos meilleures recettes</a>
         </div><!--text-slider-->
     </div><!--item-->
 </div>
