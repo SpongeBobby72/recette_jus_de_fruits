@@ -291,8 +291,8 @@
                 <div class="col-md-6 text-center">
                     <div class="inside">
                         <div class="title-head">
-                            <h2 class="text-black">Healthy Lunch</h2>
-                            <p>Be Healty Organic Food</p>
+                            <h2 class="text-black">Des boissons saines pour un corps sain</h2>
+                            <p>Par la Dream Team</p>
                         </div>
                         <ul class="week nav nav-tabs">
                             <li><a href="#sunday" data-toggle="tab">S</a></li>
@@ -306,69 +306,75 @@
                         <div class="tab-content">
                             <div class="tab-pane fade" id="sunday">
                                 <ul>
-                                    <li class="first">sunday:</li>
-                                    <li>4 oz. grilled chicken breast</li>
-                                    <li>1/2 cup sliced strawberries</li>
-                                    <li>1/2 cup steamed spinach w/ salt and pepper</li>
-                                    <li>1/2 cup brown rice, steamed</li>
+                                    <li class="first">Dimanche:</li>
+                                    <li>Smoothie musclé</li>
+                                    <li>3 abricots</li>
+                                    <li>2 pêches</li>
+                                    <li>1/2 citron</li>
                                 </ul>
                             </div>
                             <div class="tab-pane fade in active" id="monday">
                                 <ul>
-                                    <li class="first">monday:</li>
-                                    <li>4 oz. grilled chicken breast</li>
-                                    <li>1/2 cup sliced strawberries</li>
-                                    <li>1/2 cup steamed spinach w/ salt and pepper</li>
-                                    <li>1/2 cup brown rice, steamed</li>
+                                    <li class="first">Lundi:</li>
+                                    <li>Soupe Tonic</li>
+                                    <li>3 carottes</li>
+                                    <li>1/2 citron vert</li>
+                                    <li>6 rondelles de concombre</li>
                                 </ul>
                             </div>
                             <div class="tab-pane fade" id="tuesday">
                                 <ul>
-                                    <li class="first">tuesday:</li>
-                                    <li>4 oz. grilled chicken breast</li>
-                                    <li>1/2 cup sliced strawberries</li>
-                                    <li>1/2 cup steamed spinach w/ salt and pepper</li>
-                                    <li>1/2 cup brown rice, steamed</li>
+                                    <li class="first">Mardi:</li>
+                                    <li>Booster</li>
+                                    <li>5 carottes</li>
+                                    <li>Cannelle</li>
                                 </ul>
                             </div>
                             <div class="tab-pane fade" id="wednesday">
                                 <ul>
-                                    <li class="first">wednesday:</li>
-                                    <li>4 oz. grilled chicken breast</li>
-                                    <li>1/2 cup sliced strawberries</li>
-                                    <li>1/2 cup steamed spinach w/ salt and pepper</li>
-                                    <li>1/2 cup brown rice, steamed</li>
+                                    <li class="first">Mercredi:</li>
+                                    <li> La journée des enfants</li>
+                                    <li>1 concombre</li>
+                                    <li>1 citron</li>
+                                    <li>4 pommes</li>
+                                    <li>Feuilles de menthe</li>
                                 </ul>
                             </div>
                             <div class="tab-pane fade" id="thursday">
                                 <ul>
-                                    <li class="first">thursday:</li>
-                                    <li>4 oz. grilled chicken breast</li>
-                                    <li>1/2 cup sliced strawberries</li>
-                                    <li>1/2 cup steamed spinach w/ salt and pepper</li>
-                                    <li>1/2 cup brown rice, steamed</li>
+                                    <li class="first">Jeudi:</li>
+                                    <li>Tonus</li>
+                                    <li>Gingembre</li>
+                                    <li>3 carottes</li>
+                                    <li>6 fraises</li>
+                                    <li>3 rondelles de concombre</li>
                                 </ul>
                             </div>
                             <div class="tab-pane fade" id="friday">
                                 <ul>
-                                    <li class="first">friday:</li>
-                                    <li>4 oz. grilled chicken breast</li>
-                                    <li>1/2 cup sliced strawberries</li>
-                                    <li>1/2 cup steamed spinach w/ salt and pepper</li>
-                                    <li>1/2 cup brown rice, steamed</li>
+                                    <li class="first">Vendredi</li>
+                                    <li>Petit bonus de la semaine</li>
+                                    <li>Mijito</li>
+                                    <li>Feuilles de menthe</li>
+                                    <li>10 glaçons</li>
+                                    <li>Eau gazeuse</li>
+                                    <li>2 cl de sucre de canne</li>
+                                    <li>4 cl de rhum blanc</li>
+                                    <li>1/2 citron vert</li>
+
                                 </ul>
                             </div>
                             <div class="tab-pane fade" id="saturday">
                                 <ul>
-                                    <li class="first">saturday:</li>
-                                    <li>4 oz. grilled chicken breast</li>
-                                    <li>1/2 cup sliced strawberries</li>
-                                    <li>1/2 cup steamed spinach w/ salt and pepper</li>
-                                    <li>1/2 cup brown rice, steamed</li>
+                                    <li class="first">Samedi:</li>
+                                    <li>Le retour</li>
+                                    <li>1 citron</li>
+                                    <li>Feuilles de menthe</li>
+                                    <li>Eau gazeuse</li>
                                 </ul>
                             </div>
                         </div>
-                        <a href="blog.html" class="custom-btn text-center green">order now</a>
+                        <a href="blog.html" class="custom-btn text-center green">Découvrez!</a>
                     </div><!--inside-->
                 </div>
             </div>
