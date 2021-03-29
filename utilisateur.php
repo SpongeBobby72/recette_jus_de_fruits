@@ -57,60 +57,46 @@
                         <a href="#">attributs</a>
                         <div class="mega-menu columns-4">
                             <ul>
-                                <li class="first">Fruit &amp; Veg</li>
-                                <li><a href="#">Set Boxes</a></li>
-                                <li><a href="#">Fruit</a></li>
-                                <li><a href="#">Veg</a></li>
-                                <li><a href="#">Salad</a></li>
-                                <li><a href="#">Herbs</a></li>
-                                <li><a href="#">Organic</a></li>
-                                <li><a href="#">Juice &amp; Smoothies</a></li>
-                                <li><a href="#">Nuts &amp; Dried Fruit</a></li>
-                                <li><a href="#">Gourmet Pantry</a></li>
+                                <li class="first">Fruits 1</li>
+                                <li><a href="#">Abricots</a></li>
+                                <li><a href="#">Ananas</a></li>
+                                <li><a href="#">Cerise</a></li>
+                                <li><a href="#">Citron</a></li>
+                                <li><a href="#">Citrons verts</a></li>
+                                <li><a href="#">Fraise</a></li>
+                                <li><a href="#">Fraises</a></li>
                             </ul>
                             <ul>
-                                <li class="first">Dairy</li>
-                                <li><a href="#">Milk</a></li>
-                                <li><a href="#">Cheese</a></li>
-                                <li><a href="#">Specialty Cheese</a></li>
-                                <li><a href="#">Yoghurt</a></li>
-                                <li><a href="#">Butter</a></li>
-                                <li><a href="#">Cream</a></li>
-                                <li><a href="#">Dips &amp; Antipasto</a></li>
+                                <li class="first">Fruits 2</li>
+                                <li><a href="#">Kiwis</a></li>
+                                <li><a href="#">Oranges</a></li>
+                                <li><a href="#">Pamplemousse</a></li>
+                                <li><a href="#">Peches</a></li>
+                                <li><a href="#">Pomme</a></li>
+                                <li><a href="#">Pommes</a></li>
+                                <li><a href="#">Tomate</a></li>
                             </ul>
                             <ul>
-                                <li class="first">Frozen</li>
-                                <li><a href="#">Frozen Vegetables</a></li>
-                                <li><a href="#">Frozen Desserts &amp; Bakery</a></li>
-                                <li><a href="#">Frozen Seafood</a></li>
-                                <li><a href="#">Frozen Breakfast Food</a></li>
-                                <li><a href="#">Frozen Fruit</a></li>
-                                <li><a href="#">Ice</a></li>
-                                <li><a href="#">Frozen Appetizers</a></li>
+                                <li class="first">Legumes</li>
+                                <li><a href="#">Carottes</a></li>
+                                <li><a href="#">Concombre</a></li>
                             </ul>
                             <ul>
-                                <li class="first">Superfoods</li>
-                                <li><a href="#">Ayurverdic</a></li>
-                                <li><a href="#">South American</a></li>
-                                <li><a href="#">Green &amp; Fungi</a></li>
-                                <li><a href="#">Cacao &amp; Coconut</a></li>
-                                <li><a href="#">Fruit &amp; Hemp</a></li>
-                                <li><a href="#">Superfood Teas</a></li>
-                                <li><a href="#">Superfood Snacks</a></li>
-                                <li><a href="#">Superfood Juices</a></li>
+                                <li class="first">Epices</li>
+                                <li><a href="#">Cannelle</a></li>
+                                <li><a href="#">Gingembre</a></li>
                             </ul>
                         </div><!--mega-menu-->
                     </li><!--children-->
                     <li class="children">
-                        <a href="about.html">A propos</a>
+                        <a>Recettes</a>
                         <ul class="sub-menu">
-                            <li><a href="#">Why Choose Cinagro?</a></li>
-                            <li><a href="#">Organic Leadership Awards</a></li>
-                            <li><a href="#">Verification &amp; Certification</a></li>
-                            <li><a href="#">Organic Standards</a></li>
+                            <li><a href="#">Jus 1</a></li>
+                            <li><a href="#">Jus 2</a></li>
+                            <li><a href="#">Jus 3</a></li>
+                            <li><a href="#">Jus 4</a></li>
                         </ul><!--sub-menu-->
                     </li>
-                    <li><a href="blog.html">Recettes</a></li>
                     <li><a href="journal-blog.html">Journal</a></li>
                     <li class="mega-menu-top">
                         <a href="#">Store</a>
