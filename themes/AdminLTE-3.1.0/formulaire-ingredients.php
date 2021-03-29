@@ -23,6 +23,28 @@ if (isset($nom)
 }} else {
   echo"veuillez remplir tout les champs !";
 }
+if (isset($_FILES['img'])) {
+  $extensions = array('.png', '.jpg', '.jpeg');
+  $extension = strrchr($_FILES['img']['name'], '.');
+  if ($_FILES['img']['type'] == 'image/jpeg') { $extension = '.jpeg'; }
+  if ($_FILES['img']['type'] == 'image/jpg') { $extension = '.jpg'; }
+  if ($_FILES['img']['type'] == 'image/png') { $extension = '.png'; }
+  if ($_FILES['img']['size'] < 3000000) {
+    $name=rand(10000, 99999).$extension;
+    move_uploaded_file($_FILES['img']['tmp_name'], 'uploads/'.$name);
+  } else {
+    echo 'Fichier trop gros';
+
+  }
+  $url = 'uploads/'.$name;
+}
+if (isset($url)) {
+  $image_bd = $db->prepare('INSERT INTO Legumes (img)
+                              VALUES (:img)');
+  $image_bd->execute(array(
+    ':img'=>$url,
+  ));
+}
 //Je prépare la requête qui me permet de récupérer les tâches pour les afficher dans le tableau
 
 ?>
@@ -53,7 +75,7 @@ if (isset($nom)
         </select>
       </div>
       <div id="img-form">
-        <label for="img">Nom </label>
+        <label for="img">Image </label>
         <input type="file" id="img" name="img" >
       </div>
       <div id="validation_tache">
