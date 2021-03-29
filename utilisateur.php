@@ -183,7 +183,7 @@
         <img src="images/mojito.jpg" alt="slider">
         <div class="text-slider">
             <h2>La nature a toujours<br>pris soin de nous!</h2>
-            <a href="#" class="custom-btn text-center yellow">top tips</a>
+            <a href="#" class="custom-btn text-center yellow">Nos meilleures recettes</a>
         </div><!--text-slider-->
     </div><!--item-->
     <div class="item slide-two">
@@ -191,7 +191,7 @@
         <div class="text-slider">
             <h2>Jus de fruits<br>bio</h2>
             <span class="price">12.99€</span>
-            <a href="#" class="custom-btn text-center yellow">top tips</a>
+            <a href="#" class="custom-btn text-center yellow">Nos meilleures recettes</a>
         </div><!--text-slider-->
     </div><!--item-->
     <div class="item slide-three">
@@ -210,20 +210,20 @@
         <ul>
             <li>
                 <a href="shop.html">
-                    <img src="http://via.placeholder.com/115x150" alt="groceries">
-                    <span>Natural</span>
+                    <img style="width: 115px; height: 150px;" src="images/286_margaritafrozen.jpg" alt="groceries">
+                    <span>Frais</span>
                 </a>
             </li>
             <li class="center">
                 <a href="shop.html">
-                    <img src="http://via.placeholder.com/115x150" alt="pineapple">
-                    <span>organic</span>
+                    <img style="width: 115px; height: 150px;" src="images/jus-de-tomate.jpg" alt="pineapple">
+                    <span>Bio</span>
                 </a>
             </li>
             <li>
                 <a href="shop.html">
-                    <img src="http://via.placeholder.com/115x150" alt="corn">
-                    <span>health</span>
+                    <img style="width: 115px; height: 150px;" src="images/grenade.jpg" alt="corn">
+                    <span>Santé</span>
                 </a>
             </li>
         </ul>
