@@ -31,7 +31,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
                 <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
             </li>
             <li class="nav-item d-none d-sm-inline-block">
-                <a href="index3.html" class="nav-link">Home</a>
+                <a href="index3.html" class="nav-link">Voir le site</a>
             </li>
             <li class="nav-item d-none d-sm-inline-block">
                 <a href="#" class="nav-link">Contact</a>
@@ -260,11 +260,58 @@ scratch. This page gets rid of all links and provides the needed markup only.
         <!-- Main content -->
         <div class="content">
             <div class="container-fluid">
-                <div class="row">
-                    <div class="col-lg-6">
+                <div class="row d-flex justify-content-around">
+                    <div class="col-lg-3 col-6">
                     <!-- /.col-md-6 -->
-                </div>
-                <!-- /.row -->
+                        <!-- small box -->
+                        <div class="small-box bg-warning">
+                          <div class="inner">
+                            <h3>Ingrédients</h3>
+
+                            <p></p>
+                          </div>
+                          <div class="icon">
+                            <i class="ion ion-person-add"></i>
+                          </div>
+                          <a href="#" class="small-box-footer">Ajouter un ingrédient <i class="fas fa-plus-circle"></i></a>
+
+                          <div class="icon">
+                            <i class="ion ion-person-add"></i>
+                          </div>
+                          <a href="#" class="small-box-footer">Modifier un ingrédient <i class="fas fa-edit"></i></a>
+
+                          <div class="icon">
+                            <i class="ion ion-person-add"></i>
+                          </div>
+                          <a href="#" class="small-box-footer">Supprimer un ingrédient <i class="fas fa-trash"></i></a>
+                      </div>
+                    </div>
+
+                        <!-- small box -->
+                  <div class="col-lg-3 col-6">
+                        <div class="small-box bg-danger">
+                          <div class="inner">
+                            <h3>Recettes</h3>
+
+                            <p></p>
+                          </div>
+                          <div class="icon">
+                            <i class="ion ion-person-add"></i>
+                          </div>
+                          <a href="#" class="small-box-footer">Ajouter une recette <i class="fas fa-plus-circle"></i></a>
+
+                          <div class="icon">
+                            <i class="ion ion-person-add"></i>
+                          </div>
+                          <a href="#" class="small-box-footer">Editer une recette <i class="fas fa-edit"></i></a>
+
+                          <div class="icon">
+                            <i class="ion ion-person-add"></i>
+                          </div>
+                          <a href="#" class="small-box-footer">Supprimer une recette <i class="fas fa-trash"></i></a>
+                      </div>
+                    </div>
+                    </div><!-- /.row -->
             </div><!-- /.container-fluid -->
         </div>
         <!-- /.content -->
