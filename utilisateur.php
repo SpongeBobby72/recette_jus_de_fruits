@@ -384,8 +384,8 @@
                         <h2>Rejoins notre société secrète</h2>
                         <form>
                             <div class="form-group">
-                                <input type="text" placeholder="Enter your email...">
-                                <div class="custom-btn bg-black text-yellow">enter</div>
+                                <input type="text" placeholder="Entres ton email...">
+                                <div class="custom-btn bg-black text-yellow">entrer</div>
                             </div>
                         </form>
                     </div><!--subscribe-->
@@ -416,8 +416,8 @@
                 </div>
                 <div class="col-md-3 col-sm-6 col-xs-12">
                     <div class="widget-contact">
-                        <h4 class="widget-title">contact usy</h4>
-                        <address>123 6th St. Melbourne, FL 32904<br>Phone: (125) 546-4478<br>Email: yesorganic.com</address>
+                        <h4 class="widget-title">contactez nous</h4>
+                        <address>VIA Formation<br>Phone: +336 06 06 06 06<br>Email: via.info@viaformation.fr</address>
                     </div><!--widget-contact-->
                 </div>
             </div>
