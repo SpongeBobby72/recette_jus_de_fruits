@@ -4212,20 +4212,43 @@ blockquote p {
 .base-slider .slide-two .text-slider h2{
     color:greenyellow;
     text-shadow: 1px 2px 5px black;
+    text-align: center;
 }
 .base-slider .text-slider h2{
     color:greenyellow;
     text-shadow: 1px 2px 5px black;
     text-align: center;
 }
+.text-black{
+    color: #e20b50;
+}
+.product .info-product .title{
+    color:greenyellow;
+}
+.schedule .tab-content li{
+    color:white;
 
+    text-shadow: 1px 2px 5px black;
+}
 .text-pink{
     color: gold;
+    text-shadow: 1px 2px 5px black;
 }
 
 .custom-btn {
     color: gold;
 }
+.base-slider .text-slider .price{
+    text-shadow: 1px 2px 5px black;
+}
+
+
+.base-slider .slide-two .text-slider h2{
+    color:greenyellow;
+    text-shadow: 1px 2px 5px black;
+}
+
+
 
 
 /*=====  End of 19. Single Blog  ======*/
