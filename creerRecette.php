@@ -124,8 +124,6 @@ if (isset($_POST['submit'])){
                     $reqAjoutFruits20->execute(array($reqRecette['id'], 20, $_POST['number20']));
                 }
             }
-        } else {
-            echo $erreur = "Les portions sont limitées a 5";
         }
     }else {
         echo $erreur = "Il faut un titre et une image";
