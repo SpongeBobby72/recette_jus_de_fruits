@@ -38,7 +38,7 @@
         <div class="row">
             <div class="col-md-5 col-sm-4 col-xs-4">
                 <ul class="menu">
-                    <li><a href="index.php">Accueil</a></li>
+                    <li><a href="utilisateur.php">Accueil</a></li>
                     <li class="children">
                         <a>Recettes</a>
                         <ul class="sub-menu">
