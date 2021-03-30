@@ -69,3 +69,22 @@
     </div>
 </header>
 <!--============== End of Header ========================-->
+
+
+
+<!--================= End of Footer =====================-->
+</div><!--wrapper-->
+<script src="themes/front-theme/HTML/assets/js/lib/jquery.js"></script>
+<script src="themes/front-theme/HTML/assets/js/lib/bootstrap.min.js"></script>
+<script src="themes/front-theme/HTML/assets/js/lib/owl.carousel.min.js"></script>
+<script src="themes/front-theme/HTML/assets/js/lib/jquery-ui.min.js"></script>
+<script src="themes/front-theme/HTML/assets/js/lib/TweenMax.min.js"></script>
+<script src="themes/front-theme/HTML/assets/js/lib/lazyYT.js"></script>
+<script src="themes/front-theme/HTML/assets/js/lib/masonry.pkgd.min.js"></script>
+<script src="themes/front-theme/HTML/assets/js/lib/jquery.filterizr.min.js"></script>
+<script src="themes/front-theme/HTML/assets/js/lib/slick.min.js"></script>
+<script src="themes/front-theme/HTML/assets/js/lib/jquery.counterup.min.js"></script>
+<script src="themes/front-theme/HTML/assets/js/lib/waypoints.min.js"></script>
+<script src="themes/front-theme/HTML/assets/js/main.js"></script>
+</body>
+</html>
