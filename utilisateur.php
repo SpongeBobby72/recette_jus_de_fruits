@@ -290,30 +290,6 @@
                     </div><!--subscribe-->
                 </div>
                 <div class="col-md-3 col-sm-6 col-xs-12">
-                    <div class="widget-page">
-                        <h4 class="widget-title">Customer Care</h4>
-                        <a href="404.html">Register</a>
-                        <a href="404.html">My Account</a>
-                        <a href="404.html">Track Order</a>
-                    </div><!--widget-page-->
-                </div>
-                <div class="col-md-3 col-sm-6 col-xs-12">
-                    <div class="widget-page">
-                        <h4 class="widget-title">FAQ</h4>
-                        <a href="404.html">Ordering Info</a>
-                        <a href="404.html">Shipping &amp; Delivery</a>
-                        <a href="404.html">Our Guarantee</a>
-                    </div><!--widget-page-->
-                </div>
-                <div class="col-md-3 col-sm-6 col-xs-12">
-                    <div class="widget-page">
-                        <h4 class="widget-title">Our company</h4>
-                        <a href="404.html">About</a>
-                        <a href="blog.html">Press</a>
-                        <a href="single-product.html">Products</a>
-                    </div><!--widget-page-->
-                </div>
-                <div class="col-md-3 col-sm-6 col-xs-12">
                     <div class="widget-contact">
                         <h4 class="widget-title">contactez nous</h4>
                         <address>VIA Formation<br>Phone: +336 06 06 06 06<br>Email: via.info@viaformation.fr</address>
