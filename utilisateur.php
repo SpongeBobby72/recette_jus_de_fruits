@@ -26,22 +26,9 @@
     <div class="top-bar bg-black">
         <div class="container-large">
             <div class="row">
-                <div class="col-md-6 col-sm-6 col-xs-12 text-left">
+                <div class="col-md-6 col-sm-6 col-xs-12 text-right" style="width: 100%">
                     <ul>
-                        <li><a href="contact.html">Contactez nous!</a></li>
-                        <li><a href="contact.html">Support</a></li>
-                    </ul><!--right-top-bar-->
-                </div>
-                <div class="col-md-6 col-sm-6 col-xs-12 text-right">
-                    <ul>
-                        <li><a href="#">Login</a></li>
-                        <li>
-                            <select class="custom-select">
-                                <option value="Eur">Eur</option>
-                                <option value="dollar">us dollar</option>
-                                <option value="Eur2">This is just for demo</option>
-                            </select>
-                        </li>
+                        <li><a href="#">Logout</a></li>
                     </ul><!--right-top-bar-->
                 </div>
             </div>
@@ -52,79 +39,12 @@
             <div class="col-md-5 col-sm-4 col-xs-4">
                 <ul class="menu">
                     <li><a href="index.php">Accueil</a></li>
-                    <li class="mega-menu-top">
-                        <a href="#">attributs</a>
-                        <div class="mega-menu columns-4">
-                            <ul>
-                                <li class="first">Fruits 1</li>
-                                <li><a href="#">Abricots</a></li>
-                                <li><a href="#">Ananas</a></li>
-                                <li><a href="#">Cerise</a></li>
-                                <li><a href="#">Citron</a></li>
-                                <li><a href="#">Citrons verts</a></li>
-                                <li><a href="#">Fraise</a></li>
-                                <li><a href="#">Fraises</a></li>
-                            </ul>
-                            <ul>
-                                <li class="first">Fruits 2</li>
-                                <li><a href="#">Kiwis</a></li>
-                                <li><a href="#">Oranges</a></li>
-                                <li><a href="#">Pamplemousse</a></li>
-                                <li><a href="#">Peches</a></li>
-                                <li><a href="#">Pomme</a></li>
-                                <li><a href="#">Pommes</a></li>
-                                <li><a href="#">Tomate</a></li>
-                            </ul>
-                            <ul>
-                                <li class="first">Legumes</li>
-                                <li><a href="#">Carottes</a></li>
-                                <li><a href="#">Concombre</a></li>
-                            </ul>
-                            <ul>
-                                <li class="first">Epices</li>
-                                <li><a href="#">Cannelle</a></li>
-                                <li><a href="#">Gingembre</a></li>
-                            </ul>
-                        </div><!--mega-menu-->
-                    </li><!--children-->
                     <li class="children">
                         <a>Recettes</a>
                         <ul class="sub-menu">
-                            <li><a href="#">Jus 1</a></li>
-                            <li><a href="#">Jus 2</a></li>
-                            <li><a href="#">Jus 3</a></li>
-                            <li><a href="#">Jus 4</a></li>
+                            <li><a href="#">Créer une recette</a></li>
+                            <li><a href="#">Voir nos recettes</a></li>
                         </ul><!--sub-menu-->
-                    </li>
-                    <li><a href="journal-blog.html">Journal</a></li>
-                    <li class="mega-menu-top">
-                        <a href="#">Store</a>
-                        <div class="mega-menu columns-3">
-                            <ul>
-                                <li class="first">Shop Page</li>
-                                <li><a href="shop.html">Shop</a></li>
-                                <li><a href="shop-two.html">Shop v2</a></li>
-                                <li><a href="shop-column-three.html">Shop Column 3</a></li>
-                                <li><a href="shop-column-three-v2.html">Shop Column 3 v2</a></li>
-                                <li><a href="shop-column-three-v3.html">Shop Column 3 v3</a></li>
-                            </ul>
-                            <ul>
-                                <li class="first">Shop Page</li>
-                                <li><a href="shop-with-sidebar.html">Shop With Sidebar</a></li>
-                                <li><a href="shop-with-sidebar-v2.html">Shop With Sidebar v2</a></li>
-                                <li><a href="shop-column-six.html">Shop Column Six</a></li>
-                                <li><a href="shop-full-width.html">Shop Full Width</a></li>
-                                <li><a href="shop-categories.html">Shop Categories</a></li>
-                            </ul>
-                            <ul>
-                                <li class="first">Single Product</li>
-                                <li><a href="single-product-limited.html">Single Product Limited</a></li>
-                                <li><a href="single-product-sale.html">Single Product Sale</a></li>
-                                <li><a href="single-product-stock.html">Single Product Stock</a></li>
-                                <li><a href="single-product-v2.html">Single Product v2</a></li>
-                                <li><a href="single-product-video.html">Single Product Video</a></li>
-                            </ul>
-                        </div><!--mega-menu-->
                     </li>
                 </ul><!--menu-->
                 <button type="button" class="menu-button">
@@ -138,34 +58,7 @@
                 <ul class="info-header">
                     <li><a href="#"><i class="fa fa-volume-control-phone"></i>+336 06 06 06 06</a></li>
                     <li class="search-icon"><a href="#"><i class="fa fa-search"></i>Rechercher</a></li>
-                    <li class="cart">
-                        <a href="cart.html"><i class="fa fa-shopping-bag"></i>Bag (0)</a>
-                        <div class="cart-modal">
-                            <ul>
-                                <li>
-                                    <a href="single-product.html">
-                                        <img src="http://via.placeholder.com/70x70" alt="cart-produc">
-                                        <span class="title">Beech Nut -<br>Just Pumpkin</span>
-                                        <span class="price">$ 6.49</span>
-                                    </a>
-                                </li>
-                            </ul>
-                            <div class="total">
-                                Cart Subotal: <span class="price">$ 6.49</span>
-                            </div>
-                            <div class="button">
-                                <a href="cart.html" class="custom-btn">view cart</a>
-                                <a href="cart.html" class="custom-btn pink">checkout</a>
-                            </div>
-                        </div><!--cart-modal-->
-                    </li>
                 </ul><!--info-header-->
-                <ul class="social-icon">
-                    <li class="facebook"><a href="#"><i class="fa fa-facebook"></i></a></li>
-                    <li class="google"><a href="#"><i class="fa fa-google-plus"></i></a></li>
-                    <li class="tumblr"><a href="#"><i class="fa fa-tumblr"></i></a></li>
-                    <li class="instagram"><a href="#"><i class="fa fa-instagram"></i></a></li>
-                </ul><!--social-icon-->
             </div>
         </div>
         <form class="search">
@@ -277,7 +170,7 @@
         <div class="row">
             <div class="col-md-6 col-sm-12">
                 <div class="text">
-                    <h2>Déblque ton potentiel<br>avec notre selection</h2><br>
+                    <h2>Débloque ton potentiel<br>avec notre selection</h2><br>
                     <a href="shop.html" class="custom-btn text-center white">Voir les recettes</a>
                 </div><!--text-->
             </div>
