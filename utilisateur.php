@@ -42,7 +42,8 @@
                     <li class="children">
                         <a>Recettes</a>
                         <ul class="sub-menu">
-                            <li><a href="#">Créer une recette</a></li>
+                            <li><a href="creerRecette.php">Créer une recette</a></li>
+                            <li><a href="modifierRecette.php">Modifier une recette</a></li>
                             <li><a href="#">Voir nos recettes</a></li>
                         </ul><!--sub-menu-->
                     </li>
