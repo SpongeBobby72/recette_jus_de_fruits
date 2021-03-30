@@ -266,14 +266,13 @@ scratch. This page gets rid of all links and provides the needed markup only.
                         <!-- small box -->
                         <div class="small-box bg-warning">
                           <div class="inner">
-                            <h3>Ingrédients</h3>
-
+                            <h3><a href="ingredients.php">Ingrédients</a></h3>
                             <p></p>
                           </div>
                           <div class="icon">
                             <i class="ion ion-person-add"></i>
                           </div>
-                          <a href="#" class="small-box-footer">Ajouter un ingrédient <i class="fas fa-plus-circle"></i></a>
+                          <a href="formulaire-ingredients.php" class="small-box-footer">Ajouter un ingrédient <i class="fas fa-plus-circle"></i></a>
 
                           <div class="icon">
                             <i class="ion ion-person-add"></i>
