@@ -4247,7 +4247,9 @@ blockquote p {
     color:greenyellow;
     text-shadow: 1px 2px 5px black;
 }
-
+.bg-yellow{
+    background-color:gold;
+}
 
 
 
