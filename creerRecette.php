@@ -79,15 +79,19 @@ $reqFruits = $reqFruits->fetchAll();
 
 <h2 style="text-align: center">CREER VOTRE RECETTE</h2>
 
-<h3 style="text-align: center; margin-top: 30px">Fruits</h3>
+<h3 style="text-align: center; margin-top: 30px">Ingrédients</h3>
+<form style="margin-bottom: 50px" method="post">
 <?php
 foreach ($reqFruits as $fruit){
 ?>
-    <img style="width: 100px; height: 100px; display: inline-block; margin: 30px"
+    <img style="width: 100px; height: 100px; display: inline-block; margin: 30px 75px"
          src="assets%20jus/<?php echo $fruit['image'] ?>" alt="<?php echo $fruit['nom'] ?>">
+        <input style="width: 75px; padding: 10px; margin-left: -170px" type="number" name="number" id="number" value="0">
 <?php
 }
 ?>
+    <input style="display: block; margin: 50px auto; padding: 20px;" type="submit" name="submit" value="Créer">
+</form>
 
 
 
