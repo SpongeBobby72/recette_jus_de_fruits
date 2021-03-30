@@ -1,3 +1,13 @@
+<?php
+require ('config.php');
+$recettes = $dbh -> prepare("SELECT * FROM recettes");
+$recettes -> execute();
+$recettes = $recettes->fetchAll()
+
+
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -44,7 +54,7 @@
                         <ul class="sub-menu">
                             <li><a href="creerRecette.php">Créer une recette</a></li>
                             <li><a href="modifierRecette.php">Modifier une recette</a></li>
-                            <li><a href="#">Voir nos recettes</a></li>
+                            <li><a href="voirRecette.php">Voir nos recettes</a></li>
                         </ul><!--sub-menu-->
                     </li>
                 </ul><!--menu-->
@@ -70,7 +80,30 @@
 </header>
 <!--============== End of Header ========================-->
 
-
+<h2 style="text-align: center">NOS RECETTES</h2>
+    <?php
+        foreach ($recettes as $recette){
+            ?>
+            <div style="display: inline-block">
+                <img style="width: 100px; height: 100px; display: inline-block; margin: 30px 75px"
+                     src="assets jus/<?php echo $recette['img'] ?>" alt="<?php echo $recette['nom'] ?>">
+                <p style="text-align: center"><?php echo $recette['nom'] ?></p>
+                <ul>Ingrédients :</ul>
+                <?php
+                $ingredientsRecette = $dbh -> prepare('SELECT ingredients.nom FROM ingredients LEFT JOIN recettes r on ingredients.id = r.ingredient_id WHERE r.ingredient_id = :ingredient');
+                $ingredientsRecette->bindParam(":ingredient",$recette["ingredient_id"]);
+                $ingredientsRecette -> execute();
+                $ingredientsRecette = $ingredientsRecette->fetch(PDO::FETCH_ASSOC);
+                ?>
+                <li>
+                    <?php
+                        echo $ingredientsRecette['nom'];
+                    ?>
+                </li>
+            </div>
+            <?php
+        }
+    ?>
 
 
 <!--================= End of Footer =====================-->

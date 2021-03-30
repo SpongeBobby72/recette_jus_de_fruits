@@ -157,7 +157,7 @@ if (isset($_POST['submit'])){
                         <ul class="sub-menu">
                             <li><a href="creerRecette.php">Créer une recette</a></li>
                             <li><a href="modifierRecette.php">Modifier une recette</a></li>
-                            <li><a href="#">Voir nos recettes</a></li>
+                            <li><a href="voirRecette.php">Voir nos recettes</a></li>
                         </ul><!--sub-menu-->
                     </li>
                 </ul><!--menu-->
