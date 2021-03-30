@@ -1,6 +1,6 @@
 <?php
 require ('config.php');
-$reqFruits = $dbh -> prepare("SELECT * FROM Fruits");
+$reqFruits = $dbh -> prepare("SELECT * FROM ingredients");
 $reqFruits -> execute();
 $reqFruits = $reqFruits->fetchAll();
 
@@ -84,7 +84,7 @@ $reqFruits = $reqFruits->fetchAll();
 foreach ($reqFruits as $fruit){
 ?>
     <img style="width: 100px; height: 100px; display: inline-block; margin: 30px"
-         src="assets%20jus/<?php echo $fruit['img'] ?>" alt="<?php echo $fruit['name'] ?>">
+         src="assets%20jus/<?php echo $fruit['image'] ?>" alt="<?php echo $fruit['nom'] ?>">
 <?php
 }
 ?>
