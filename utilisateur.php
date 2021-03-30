@@ -38,13 +38,13 @@
         <div class="row">
             <div class="col-md-5 col-sm-4 col-xs-4">
                 <ul class="menu">
-                    <li><a href="index.php">Accueil</a></li>
+                    <li><a href="utilisateur.php">Accueil</a></li>
                     <li class="children">
                         <a>Recettes</a>
                         <ul class="sub-menu">
                             <li><a href="creerRecette.php">Créer une recette</a></li>
                             <li><a href="modifierRecette.php">Modifier une recette</a></li>
-                            <li><a href="#">Voir nos recettes</a></li>
+                            <li><a href="voirRecette.php">Voir nos recettes</a></li>
                         </ul><!--sub-menu-->
                     </li>
                 </ul><!--menu-->
