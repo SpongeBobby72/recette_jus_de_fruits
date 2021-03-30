@@ -1,5 +1,12 @@
+<?php
+require ('config.php');
+$reqFruits = $dbh -> prepare("SELECT * FROM Fruits");
+$reqFruits -> execute();
+$reqFruits = $reqFruits->fetchAll();
+
+?>
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <title>Cinagro</title>
     <meta charset="UTF-8">
@@ -69,6 +76,18 @@
     </div>
 </header>
 <!--============== End of Header ========================-->
+
+<h2 style="text-align: center">CREER VOTRE RECETTE</h2>
+
+<h3 style="text-align: center; margin-top: 30px">Fruits</h3>
+<?php
+foreach ($reqFruits as $fruit){
+?>
+    <img style="width: 100px; height: 100px; display: inline-block; margin: 30px"
+         src="assets%20jus/<?php echo $fruit['img'] ?>" alt="<?php echo $fruit['name'] ?>">
+<?php
+}
+?>
 
 
 
