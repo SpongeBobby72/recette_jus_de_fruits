@@ -1,3 +1,13 @@
+<?php
+require ('config.php');
+$recettes = $dbh -> prepare("SELECT * FROM ingredients");
+$recettes -> execute();
+$recettes = $recettes->fetch(PDO::FETCH_ASSOC);
+
+
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
