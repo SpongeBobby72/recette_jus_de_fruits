@@ -1,8 +1,8 @@
 <?php
 require ('config.php');
-$recettes = $dbh -> prepare("SELECT * FROM ingredients");
+$recettes = $dbh -> prepare("SELECT * FROM recettes");
 $recettes -> execute();
-$recettes = $recettes->fetch(PDO::FETCH_ASSOC);
+$recettes = $recettes->fetchAll()
 
 
 
@@ -80,7 +80,18 @@ $recettes = $recettes->fetch(PDO::FETCH_ASSOC);
 </header>
 <!--============== End of Header ========================-->
 
+<h2 style="text-align: center">NOS RECETTES</h2>
 
+<form style="margin-bottom: 50px" method="post">
+    <?php
+        foreach ($recettes as $recette){
+            ?>
+            <img style="width: 100px; height: 100px; display: inline-block; margin: 30px 75px"
+                 src="assets jus/<?php echo $recette['img'] ?>.png" alt="<?php echo $recette['nom'] ?>">
+            <?php
+        }
+    ?>
+</form>
 
 
 <!--================= End of Footer =====================-->
