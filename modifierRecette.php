@@ -1,3 +1,28 @@
+<?php
+require ("config.php");
+try {
+$dbh = new PDO($dsn, $username, $password);
+} catch (PDOException $e) {
+var_dump($e);
+}
+
+$recipes = $dbh->prepare('SELECT * FROM `recettes`;');
+$recipes->execute();
+
+$allRecipes = [];
+
+while ($recipe = $recipes->fetch()) {
+foreach ($recipe as $k => $v) {
+if (is_int($k) == true) {
+unset ($recipe[$k]);
+}
+}
+$allRecipes[] = $recipe;
+}
+
+var_dump($allRecipes);
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -69,6 +94,40 @@
     </div>
 </header>
 <!--============== End of Header ========================-->
+
+<h2 style="text-align: center">MODIFIER VOTRE RECETTE</h2>
+
+<h3 style="text-align: center; margin-top: 30px">Vous pouvez ajouter ou retirer un fruit ou un légume</h3><br><br>
+
+
+<?php
+$recipes = $dbh -> prepare('SELECT recettes.nom, ingredients.nom, recettes.portion FROM `recettes`
+    LEFT JOIN ingredients ON (recettes.ingredient_id = ingredients.id) WHERE recettes.nom = ?');
+
+$recipes -> execute(array ('jus-1'));
+
+
+
+var_dump($recipes);
+
+while ($recipe = $recipes->fetch(PDO::FETCH_ASSOC)) {
+
+    echo '<h1>Nom du jus: ' . $recipe['nom'] . '</h1>';
+
+    echo '<ul>';
+    echo '<li>Ingrédients du jus: ' . $ingredient['nom'] . '</li>';
+
+
+}
+
+?>
+
+
+
+                    <input style="display: block; margin: 50px auto; padding: 20px;" type="submit" name="submit" value="Soumettre votre composition">
+                </form>
+            </div>
+        </div>
 
 
 
