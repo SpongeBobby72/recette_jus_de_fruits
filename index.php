@@ -13,7 +13,7 @@
 </head>
 <body>
 <div>
-<a href="admin.php">Administrateur</a>
+<a href="themes/AdminLTE-3.1.0/admin.php">Administrateur</a>
 </div>
 
 <div>
