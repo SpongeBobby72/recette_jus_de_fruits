@@ -7,18 +7,13 @@ try {
 } catch (PDOException $e) {
   var_dump($e);
 }
-
-
-
-$nomRecettes = $db->prepare('SELECT recettes.nom as recette, recettes.ingredient_id as ingrId, recettes.img img, ingredients.nom as ingrNom FROM `recettes`
-    LEFT JOIN ingredients ON recettes.ingredient_id = ingredients.id
-    ');
-$nomRecettes->execute();
-
+// Requête pour récupérer les recettes de la base de données
+$toutesLesRecettes = $db->prepare('SELECT * FROM `nomRecette` ;');
+$toutesLesRecettes->execute();
 
 $recettes = [];
 
-while ($recette = $nomRecettes->fetch()) {
+while ($recette = $toutesLesRecettes->fetch()) {
   foreach ($recette as $k => $v) {
     if (is_int($k) == true) {
       unset ($recette[$k]);
@@ -29,6 +24,14 @@ while ($recette = $nomRecettes->fetch()) {
 
 var_dump($recettes);
 
+// Requête pour supprimer une recette de la base de données
+
+$recipeToDelete = $_GET['delete_id'];
+
+$suppr = $db->prepare('DELETE FROM `nomRecette` WHERE id = :id');
+$suppr->execute([
+  'id' => $_GET['delete_id'],
+]);
 
 ?>
 
@@ -46,19 +49,15 @@ var_dump($recettes);
 <h1>Liste des recettes</h1>
 
 <?php
-  foreach ($toutesLesRecettes as $recette) {
+  foreach ($recettes as $recette) {
 ?>
 <div id="recettes">
   <div id="recette">
-    <h2><?php echo $recette['recette'] ?></h2>
-    <div><img src="../../assets-jus/<?php echo $recette['img'] ?>" alt="<?php echo $recette['recette'] ?>"></div>
-    <div>
-      <h3>Ingrédients :</h3>
-      <ul>
-        <li><?php echo $recette['ingrNom'] ?></li>
+    <h2><?php echo $recette['nom'] . ' <a href="/themes/AdminLTE-3.1.0/suppr-recette.php?delete_id='.$recette['id'].'">Supprimer la recette</a>';
 
-      </ul>
-    </div>
+header('Location:/themes/AdminLTE-3.1.0/suppr-recette.php');
+
+      ?></h2>
   </div>
 
   <?php
