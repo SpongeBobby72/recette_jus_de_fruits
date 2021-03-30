@@ -54,7 +54,7 @@ $recettes = $recettes->fetchAll()
                         <ul class="sub-menu">
                             <li><a href="creerRecette.php">Créer une recette</a></li>
                             <li><a href="modifierRecette.php">Modifier une recette</a></li>
-                            <li><a href="#">Voir nos recettes</a></li>
+                            <li><a href="voirRecette.php">Voir nos recettes</a></li>
                         </ul><!--sub-menu-->
                     </li>
                 </ul><!--menu-->
@@ -81,17 +81,17 @@ $recettes = $recettes->fetchAll()
 <!--============== End of Header ========================-->
 
 <h2 style="text-align: center">NOS RECETTES</h2>
-
-<form style="margin-bottom: 50px" method="post">
     <?php
         foreach ($recettes as $recette){
             ?>
-            <img style="width: 100px; height: 100px; display: inline-block; margin: 30px 75px"
-                 src="assets jus/<?php echo $recette['img'] ?>.png" alt="<?php echo $recette['nom'] ?>">
+            <div style="display: inline-block">
+                <img style="width: 100px; height: 100px; display: inline-block; margin: 30px 75px"
+                     src="assets jus/<?php echo $recette['img'] ?>.png" alt="<?php echo $recette['nom'] ?>">
+                <p style="text-align: center"><?php echo $recette['nom'] ?></p>
+            </div>
             <?php
         }
     ?>
-</form>
 
 
 <!--================= End of Footer =====================-->
