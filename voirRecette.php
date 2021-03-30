@@ -1,11 +1,5 @@
 <?php
 require ('config.php');
-$recettes = $dbh -> prepare("SELECT * FROM recettes");
-$recettes -> execute();
-$recettes = $recettes->fetchAll()
-
-
-
 ?>
 
 <!DOCTYPE html>
@@ -81,29 +75,43 @@ $recettes = $recettes->fetchAll()
 <!--============== End of Header ========================-->
 
 <h2 style="text-align: center">NOS RECETTES</h2>
+
     <?php
-        foreach ($recettes as $recette){
-            ?>
-            <div style="display: inline-block">
-                <img style="width: 100px; height: 100px; display: inline-block; margin: 30px 75px"
-                     src="assets jus/<?php echo $recette['img'] ?>" alt="<?php echo $recette['nom'] ?>">
-                <p style="text-align: center"><?php echo $recette['nom'] ?></p>
-                <ul>Ingrédients :</ul>
+    $nomRecettes = $dbh -> prepare("SELECT * FROM nomRecette");
+    $nomRecettes -> execute();
+    $nomRecettes = $nomRecettes->fetchAll();
+    foreach ($nomRecettes as $nom){
+        ?>
+        <div style="display: inline-block;background-color: gold; margin: 50px; border-radius: 10px;">
+            <img style="width: 100px; height: 100px; display: inline-block; margin: 30px 75px"
+                     src="assets jus/<?php echo $nom['img'] ?>" alt="<?php echo $nom['nom'] ?>">
+            <p style="text-align: center"><?php echo $nom['nom'] ?></p>
+            <ul style="margin: 20px 39px;">Ingrédients :<br>
                 <?php
-                $ingredientsRecette = $dbh -> prepare('SELECT ingredients.nom FROM ingredients LEFT JOIN recettes r on ingredients.id = r.ingredient_id WHERE r.ingredient_id = :ingredient');
-                $ingredientsRecette->bindParam(":ingredient",$recette["ingredient_id"]);
-                $ingredientsRecette -> execute();
-                $ingredientsRecette = $ingredientsRecette->fetch(PDO::FETCH_ASSOC);
-                ?>
-                <li>
-                    <?php
-                        echo $ingredientsRecette['nom'];
+                $recette = $dbh->prepare("SELECT ingredients.nom, ingredients.image, recettes.portion 
+                                                FROM `recettes` LEFT JOIN ingredients 
+                                                ON ingredients.id = recettes.ingredient_id 
+                                                WHERE recette_id = ?");
+                $recette->execute(array($nom['id']));
+                $recette = $recette -> fetchAll();
+                foreach ($recette as $ingredient){
                     ?>
-                </li>
-            </div>
-            <?php
+                    <li style="display: inline-block">
+                        <?php echo $ingredient['portion']." ".$ingredient['nom'] ?>
+                    </li>
+                    <img style="width: 30px; display: inline-block;"
+                         src="assets%20jus/<?php echo $ingredient['image']?>"
+                         alt="<?php echo $ingredient['nom']?>"><br>
+                <?php
+                }
+                ?>
+            </ul>
+            <a style="float: right; margin: 0 10px 10px 0;"
+               href="modifierRecette.php?id=<?php echo $nom['id'] ?>">Modifier</a>
+        </div>
+        <?php
         }
-    ?>
+        ?>
 
 
 <!--================= End of Footer =====================-->
