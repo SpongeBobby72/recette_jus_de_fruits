@@ -1,10 +1,3 @@
-.text-pink{
-    color: gold;
-}
-
-.custom-btn {
-    color: gold;
-}
 /*
 Theme Name:     Cinagro
 Theme URI:      cinagro-html.fruitfulcode.com
@@ -4215,6 +4208,26 @@ blockquote p {
 #contact-us-form h3 {
     margin-bottom: 40px;
 }
+
+.base-slider .slide-two .text-slider h2{
+    color:greenyellow;
+    text-shadow: 1px 2px 5px black;
+}
+.base-slider .text-slider h2{
+    color:greenyellow;
+    text-shadow: 1px 2px 5px black;
+    text-align: center;
+}
+
+.text-pink{
+    color: gold;
+}
+
+.custom-btn {
+    color: gold;
+}
+
+
 /*=====  End of 19. Single Blog  ======*/
 /*===================================
 =            Colors Theme            =
