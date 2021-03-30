@@ -4,6 +4,23 @@ $reqFruits = $dbh -> prepare("SELECT * FROM ingredients");
 $reqFruits -> execute();
 $reqFruits = $reqFruits->fetchAll();
 
+if (isset($_POST['submit'])){
+    if ($_POST['number1']+$_POST['number2']+$_POST['number3']+$_POST['number4']+
+        $_POST['number7']+$_POST['number8']+$_POST['number9']+$_POST['number10']+
+        $_POST['number11']+$_POST['number12']+$_POST['number13']+$_POST['number14']+
+        $_POST['number15']+$_POST['number16']+$_POST['number17']+$_POST['number18']+
+        $_POST['number19']+$_POST['number20'] < 6){
+        if ($_POST['number1'] != 0) {
+            echo "oui";
+        } else {
+            echo "non";
+        }
+    } else {
+        echo $erreur = "Les portions sont limitées a 5";
+    }
+}
+
+
 ?>
 <!DOCTYPE html>
 <html lang="fr">
@@ -86,11 +103,13 @@ foreach ($reqFruits as $fruit){
 ?>
     <img style="width: 100px; height: 100px; display: inline-block; margin: 30px 75px"
          src="assets%20jus/<?php echo $fruit['image'] ?>" alt="<?php echo $fruit['nom'] ?>">
-        <input style="width: 75px; padding: 10px; margin-left: -170px" type="number" name="number" id="number" value="0">
+        <input style="width: 75px; padding: 10px; margin-left: -170px" type="number"
+               name="number<?php echo $fruit['id'] ?>" id="number" value="0">
 <?php
 }
 ?>
-    <input style="display: block; margin: 50px auto; padding: 20px;" type="submit" name="submit" value="Créer">
+    <input style="display: block; margin: 50px auto; padding: 20px;"
+           type="submit" name="submit" value="Créer">
 </form>
 
 
