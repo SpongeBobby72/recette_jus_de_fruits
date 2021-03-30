@@ -86,8 +86,20 @@ $recettes = $recettes->fetchAll()
             ?>
             <div style="display: inline-block">
                 <img style="width: 100px; height: 100px; display: inline-block; margin: 30px 75px"
-                     src="assets jus/<?php echo $recette['img'] ?>.png" alt="<?php echo $recette['nom'] ?>">
+                     src="assets jus/<?php echo $recette['img'] ?>" alt="<?php echo $recette['nom'] ?>">
                 <p style="text-align: center"><?php echo $recette['nom'] ?></p>
+                <ul>Ingrédients :</ul>
+                <?php
+                $ingredientsRecette = $dbh -> prepare('SELECT ingredients.nom FROM ingredients LEFT JOIN recettes r on ingredients.id = r.ingredient_id WHERE r.ingredient_id = :ingredient');
+                $ingredientsRecette->bindParam(":ingredient",$recette["ingredient_id"]);
+                $ingredientsRecette -> execute();
+                $ingredientsRecette = $ingredientsRecette->fetch(PDO::FETCH_ASSOC);
+                ?>
+                <li>
+                    <?php
+                        echo $ingredientsRecette['nom'];
+                    ?>
+                </li>
             </div>
             <?php
         }
