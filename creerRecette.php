@@ -187,6 +187,10 @@ if (isset($_POST['submit'])){
 
 <h3 style="text-align: center; margin-top: 30px">Ingrédients</h3>
 <form style="margin-bottom: 50px" method="post">
+    <div style="display: block; text-align: center; margin: 50px">
+        <label style="display: block; margin-bottom: 20px" for="titreRecette">Nom de la Recette: </label>
+        <input type="text" name="titreRecette" id="titreRecette" placeholder="Nom">
+    </div>
 <?php
 foreach ($reqFruits as $fruit){
 ?>
@@ -197,9 +201,7 @@ foreach ($reqFruits as $fruit){
 <?php
 }
 ?>
-    <label for="titreRecette">Nom de la Recette: </label>
-    <input type="text" name="titreRecette" id="titreRecette" placeholder="Nom">
-    <input  name="imageRecette" type="file">
+    <input style="display: block; margin: 30px auto; padding: 10px;" name="imageRecette" type="file">
     <input style="display: block; margin: 50px auto; padding: 20px;"
            type="submit" name="submit" value="Créer">
 </form>
