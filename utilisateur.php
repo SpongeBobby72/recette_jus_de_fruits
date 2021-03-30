@@ -75,7 +75,7 @@
         <img src="images/mojito.jpg" alt="slider">
         <div class="text-slider">
             <h2>La nature a toujours<br>pris soin de nous!</h2>
-            <a href="#" class="custom-btn text-center yellow">Nos meilleures recettes</a>
+            <a href="voirRecette.php" class="custom-btn text-center yellow">Nos meilleures recettes</a>
         </div><!--text-slider-->
     </div><!--item-->
     <div class="item slide-two">
@@ -83,14 +83,14 @@
         <div class="text-slider">
             <h2>Jus de fruits<br>bio</h2>
             <span class="price" style="color: gold;">12.99€</span>
-            <a href="#" class="custom-btn text-center yellow">Nos meilleures recettes</a>
+            <a href="voirRecette.php" class="custom-btn text-center yellow">Nos meilleures recettes</a>
         </div><!--text-slider-->
     </div><!--item-->
     <div class="item slide-three">
         <img src="images/detox-1995433_1920.jpg" alt="slider">
         <div class="text-slider last">
             <h2>Un large choix de jus de légumes<br><span class="text-pink">17€</span></h2>
-            <a href="#" class="custom-btn green text-center">Nos meilleures recettes</a>
+            <a href="voirRecette.php" class="custom-btn green text-center">Nos meilleures recettes</a>
         </div><!--text-slider-->
     </div><!--item-->
 </div>
@@ -160,9 +160,6 @@
                 </div><!--product-->
             </div>
         </div><!--slider-product-->
-        <div class="text-center">
-            <a href="shop.html" class="custom-btn text-center green"><span>View the store</span></a>
-        </div>
     </div><!--product-slider-->
 </div>
 <!--=============== End of Product Slider ===================-->
@@ -172,7 +169,7 @@
             <div class="col-md-6 col-sm-12">
                 <div class="text">
                     <h2>Débloque ton potentiel<br>avec notre selection</h2><br>
-                    <a href="shop.html" class="custom-btn text-center white">Voir les recettes</a>
+                    <a href="voirRecette.php" class="custom-btn text-center white">Voir les recettes</a>
                 </div><!--text-->
             </div>
         </div>
@@ -268,7 +265,7 @@
                                 </ul>
                             </div>
                         </div>
-                        <a href="blog.html" class="custom-btn text-center green">Découvrez!</a>
+                        <a href="voirRecette.php" class="custom-btn text-center green">Découvrez!</a>
                     </div><!--inside-->
                 </div>
             </div>
