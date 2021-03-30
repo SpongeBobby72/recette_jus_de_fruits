@@ -22,16 +22,17 @@ while ($recette = $toutesLesRecettes->fetch()) {
   $recettes[] = $recette;
 }
 
-var_dump($recettes);
-
 // Requête pour supprimer une recette de la base de données
 
-$recipeToDelete = $_GET['delete_id'];
+if ( isset($_GET['delete_id']) ) {
 
-$suppr = $db->prepare('DELETE FROM `nomRecette` WHERE id = :id');
-$suppr->execute([
-  'id' => $_GET['delete_id'],
-]);
+  $recipeToDelete = $_GET['delete_id'];
+
+  $suppr = $db->prepare('DELETE FROM `nomRecette` WHERE id = :id');
+  $suppr->execute([
+    'id' => $_GET['delete_id'],
+  ]);
+}
 
 ?>
 
@@ -55,7 +56,7 @@ $suppr->execute([
   <div id="recette">
     <h2><?php echo $recette['nom'] . ' <a href="/themes/AdminLTE-3.1.0/suppr-recette.php?delete_id='.$recette['id'].'">Supprimer la recette</a>';
 
-header('Location:/themes/AdminLTE-3.1.0/suppr-recette.php');
+// header('Location:../../suppr-recette.php');
 
       ?></h2>
   </div>
