@@ -28,104 +28,15 @@ if (isset($_POST['submit'])){
         $reqVoirRecette -> execute(array($reqRecette['id']));
         $reqVoirRecette = $reqVoirRecette->rowCount();
         if ($reqVoirRecette == 0){
-            if ($_POST['number1'] || $_POST['number2'] || $_POST['number3'] || $_POST['number4'] ||
-            $_POST['number7'] || $_POST['number8'] || $_POST['number9'] || $_POST['number10'] ||
-            $_POST['number11'] || $_POST['number12'] || $_POST['number13'] || $_POST['number14'] ||
-            $_POST['number15'] || $_POST['number16'] || $_POST['number17'] || $_POST['number18'] ||
-            $_POST['number19'] || $_POST['number20']) {
-                if ($_POST['number1']) {
-                    $reqAjoutFruits1 = $dbh->prepare("INSERT INTO `recettes`
+            if (isset($_POST['ingredient']) && count($_POST['ingredient']) > 0) {
+                $reqAjoutFruits = $dbh->prepare("INSERT INTO `recettes`
                                     (`recette_id`,`ingredient_id`, `portion`) VALUES (?,?,?)");
-                    $reqAjoutFruits1->execute(array($reqRecette['id'], 1, $_POST['number1']));
-                }
-                if ($_POST['number2']) {
-                    $reqAjoutFruits2 = $dbh->prepare("INSERT INTO `recettes`
-                                    (`recette_id`,`ingredient_id`, `portion`) VALUES (?,?,?)");
-                    $reqAjoutFruits2->execute(array($reqRecette['id'], 2, $_POST['number2']));
-                }
-                if ($_POST['number3']) {
-                    $reqAjoutFruits3 = $dbh->prepare("INSERT INTO `recettes`
-                                    (`recette_id`,`ingredient_id`, `portion`) VALUES (?,?,?)");
-                    $reqAjoutFruits3->execute(array($reqRecette['id'], 3, $_POST['number3']));
-                }
-                if ($_POST['number4']) {
-                    $reqAjoutFruits4 = $dbh->prepare("INSERT INTO `recettes`
-                                    (`recette_id`,`ingredient_id`, `portion`) VALUES (?,?,?)");
-                    $reqAjoutFruits4->execute(array($reqRecette['id'], 4, $_POST['number4']));
-                }
-                if ($_POST['number7']) {
-                    $reqAjoutFruits7 = $dbh->prepare("INSERT INTO `recettes`
-                                    (`recette_id`,`ingredient_id`, `portion`) VALUES (?,?,?)");
-                    $reqAjoutFruits7->execute(array($reqRecette['id'], 7, $_POST['number7']));
-                }
-                if ($_POST['number8']) {
-                    $reqAjoutFruits8 = $dbh->prepare("INSERT INTO `recettes`
-                                    (`recette_id`,`ingredient_id`, `portion`) VALUES (?,?,?)");
-                    $reqAjoutFruits8->execute(array($reqRecette['id'], 8, $_POST['number8']));
-                }
-                if ($_POST['number9']) {
-                    $reqAjoutFruits9 = $dbh->prepare("INSERT INTO `recettes`
-                                    (`recette_id`,`ingredient_id`, `portion`) VALUES (?,?,?)");
-                    $reqAjoutFruits9->execute(array($reqRecette['id'], 9, $_POST['number9']));
-                }
-                if ($_POST['number10']) {
-                    $reqAjoutFruits10 = $dbh->prepare("INSERT INTO `recettes`
-                                    (`recette_id`,`ingredient_id`, `portion`) VALUES (?,?,?)");
-                    $reqAjoutFruits10->execute(array($reqRecette['id'], 10, $_POST['number10']));
-                }
-                if ($_POST['number11']) {
-                    $reqAjoutFruits11 = $dbh->prepare("INSERT INTO `recettes`
-                                    (`recette_id`,`ingredient_id`, `portion`) VALUES (?,?,?)");
-                    $reqAjoutFruits11->execute(array($reqRecette['id'], 11, $_POST['number11']));
-                }
-                if ($_POST['number12']) {
-                    $reqAjoutFruits12 = $dbh->prepare("INSERT INTO `recettes`
-                                    (`recette_id`,`ingredient_id`, `portion`) VALUES (?,?,?)");
-                    $reqAjoutFruits12->execute(array($reqRecette['id'], 12, $_POST['number12']));
-                }
-                if ($_POST['number13']) {
-                    $reqAjoutFruits13 = $dbh->prepare("INSERT INTO `recettes`
-                                    (`recette_id`,`ingredient_id`, `portion`) VALUES (?,?,?)");
-                    $reqAjoutFruits13->execute(array($reqRecette['id'], 13, $_POST['number13']));
-                }
-                if ($_POST['number14']) {
-                    $reqAjoutFruits14 = $dbh->prepare("INSERT INTO `recettes`
-                                    (`recette_id`,`ingredient_id`, `portion`) VALUES (?,?,?)");
-                    $reqAjoutFruits14->execute(array($reqRecette['id'], 14, $_POST['number14']));
-                }
-                if ($_POST['number15']) {
-                    $reqAjoutFruits15 = $dbh->prepare("INSERT INTO `recettes`
-                                    (`recette_id`,`ingredient_id`, `portion`) VALUES (?,?,?)");
-                    $reqAjoutFruits15->execute(array($reqRecette['id'], 15, $_POST['number15']));
-                }
-                if ($_POST['number16']) {
-                    $reqAjoutFruits16 = $dbh->prepare("INSERT INTO `recettes`
-                                    (`recette_id`,`ingredient_id`, `portion`) VALUES (?,?,?)");
-                    $reqAjoutFruits16->execute(array($reqRecette['id'], 16, $_POST['number16']));
-                }
-                if ($_POST['number17']) {
-                    $reqAjoutFruits17 = $dbh->prepare("INSERT INTO `recettes`
-                                    (`recette_id`,`ingredient_id`, `portion`) VALUES (?,?,?)");
-                    $reqAjoutFruits17->execute(array($reqRecette['id'], 17, $_POST['number17']));
-                }
-                if ($_POST['number18']) {
-                    $reqAjoutFruits18 = $dbh->prepare("INSERT INTO `recettes`
-                                    (`recette_id`,`ingredient_id`, `portion`) VALUES (?,?,?)");
-                    $reqAjoutFruits18->execute(array($reqRecette['id'], 18, $_POST['number18']));
-                }
-                if ($_POST['number19']) {
-                    $reqAjoutFruits19 = $dbh->prepare("INSERT INTO `recettes`
-                                    (`recette_id`,`ingredient_id`, `portion`) VALUES (?,?,?)");
-                    $reqAjoutFruits19->execute(array($reqRecette['id'], 19, $_POST['number19']));
-                }
-                if ($_POST['number20']) {
-                    $reqAjoutFruits20 = $dbh->prepare("INSERT INTO `recettes`
-                                    (`recette_id`,`ingredient_id`, `portion`) VALUES (?,?,?)");
-                    $reqAjoutFruits20->execute(array($reqRecette['id'], 20, $_POST['number20']));
+                foreach ($_POST['ingredient'] as $ingredient => $portion) {
+                    if ($portion > 0) {
+                        $reqAjoutFruits->execute(array($reqRecette['id'], $ingredient, $portion));
+                    }
                 }
             }
-        } else {
-            echo $erreur = "Les portions sont limitées a 5";
         }
     }else {
         echo $erreur = "Il faut un titre et une image";
@@ -179,7 +90,6 @@ if (isset($_POST['submit'])){
                         <a>Recettes</a>
                         <ul class="sub-menu">
                             <li><a href="creerRecette.php">Créer une recette</a></li>
-                            <li><a href="modifierRecette.php">Modifier une recette</a></li>
                             <li><a href="voirRecette.php">Voir nos recettes</a></li>
                         </ul><!--sub-menu-->
                     </li>
@@ -220,7 +130,7 @@ foreach ($reqFruits as $fruit){
     <img style="width: 100px; height: 100px; display: inline-block; margin: 30px 75px"
          src="assets%20jus/<?php echo $fruit['image'] ?>" alt="<?php echo $fruit['nom'] ?>">
         <input style="width: 75px; padding: 10px; margin-left: -170px" type="number"
-               name="number<?php echo $fruit['id'] ?>" id="number">
+               name="ingredient[<?php echo $fruit['id'] ?>]" id="number">
 <?php
 }
 ?>

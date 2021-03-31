@@ -126,15 +126,16 @@ if (isset($_POST['plusfraises'])) {
 }
 if (isset($_POST['plusgingembre'])) {
     if ($_POST['plusgingembre'] == "+") {
-        $ingRecettes = $dbh -> prepare("SELECT * FROM recettes WHERE recette_id = ? 
+        $ingRecettes = $dbh -> prepare("UPDATE recettes SET portion = portion + 1 WHERE recette_id = ? 
                                                 AND ingredient_id = ?");
         $ingRecettes -> execute(array($_GET['id'], 13));
-        $ingRecettes = $ingRecettes->fetch();
-        $newIngredient = array($ingRecettes['portion'], 1);
-        $newIng = array_sum($newIngredient);
-        $ajoutIngredient = $dbh->prepare("UPDATE recettes SET portion`= ? 
-                    WHERE recette_id = ? AND ingredient_id = ?");
-        $ajoutIngredient->execute(array($newIng, $_GET['id'], 13));
+//        $ingRecettes = $ingRecettes->fetch();
+//        $newIngredient = array($ingRecettes['portion'], 1);
+//        var_dump($ingRecettes['portion']);
+//        $newIng = array_sum($newIngredient);
+//        $ajoutIngredient = $dbh->prepare("UPDATE recettes SET portion`= ?
+//                    WHERE recette_id = ? AND ingredient_id = ?");
+//        $ajoutIngredient->execute(array($newIng, $_GET['id'], 13));
     }
 }
 if (isset($_POST['pluskiwis'])) {
@@ -268,7 +269,6 @@ if (isset($_POST['plustomate'])) {
                         <a>Recettes</a>
                         <ul class="sub-menu">
                             <li><a href="creerRecette.php">Créer une recette</a></li>
-                            <li><a href="modifierRecette.php">Modifier une recette</a></li>
                             <li><a href="voirRecette.php">Voir nos recettes</a></li>
                         </ul><!--sub-menu-->
                     </li>
