@@ -26,7 +26,7 @@ if (isset($_POST['submit'])){
 
         $reqVoirRecette = $dbh -> prepare("SELECT * FROM recettes WHERE recette_id = ?");
         $reqVoirRecette -> execute(array($reqRecette['id']));
-        $reqVoirRecette = $reqVoirRecette->rowCount();
+        $reqVoirRecette = $reqVoirRecette -> rowCount();
         if ($reqVoirRecette == 0){
             if (isset($_POST['ingredient']) && count($_POST['ingredient']) > 0) {
                 $reqAjoutFruits = $dbh->prepare("INSERT INTO `recettes`
@@ -131,7 +131,7 @@ foreach ($reqFruits as $fruit){
          src="assets%20jus/<?php echo $fruit['image'] ?>" alt="<?php echo $fruit['nom'] ?>">
         <input style="width: 75px; padding: 10px; margin-left: -170px" type="number"
                name="ingredient[<?php echo $fruit['id'] ?>]" id="number">
-<?php
+    <?php
 }
 ?>
     <input style="display: block; margin: 30px auto; padding: 10px;" name="imageRecette" type="file">

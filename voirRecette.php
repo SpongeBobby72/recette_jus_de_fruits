@@ -74,7 +74,7 @@ require ('config.php');
 <!--============== End of Header ========================-->
 
 <h2 style="text-align: center">NOS RECETTES</h2>
-
+    <div style="text-align: center;" class="conteneur">
     <?php
     $nomRecettes = $dbh -> prepare("SELECT * FROM nomRecette");
     $nomRecettes -> execute();
@@ -111,7 +111,7 @@ require ('config.php');
         <?php
         }
         ?>
-
+    </div>
 
 <!--================= End of Footer =====================-->
 </div><!--wrapper-->

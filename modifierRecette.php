@@ -3,226 +3,29 @@ require ('config.php');
 $nomRecettes = $dbh -> prepare("SELECT * FROM nomRecette WHERE id = ?");
 $nomRecettes -> execute(array($_GET['id']));
 $nomRecettes = $nomRecettes->fetch();
-
-if (isset($_POST['plusabricot'])) {
-    if ($_POST['plusabricot'] == "+") {
-        $ingRecettes = $dbh -> prepare("SELECT * FROM recettes WHERE recette_id = ? 
+$idIngredient = $dbh -> prepare("SELECT * FROM ingredients WHERE nom = ?");
+if ((isset($_POST['plus']) && count($_POST['plus']) > 0)) {
+    $ajoutIngredient = $dbh->prepare("UPDATE recettes SET portion = portion + 1 WHERE recette_id = ? 
                                                 AND ingredient_id = ?");
-        $ingRecettes -> execute(array($_GET['id'], 1));
-        $ingRecettes = $ingRecettes->fetch();
-        $newIngredient = $ingRecettes['portion'] + 1;
-        $ajoutIngredient = $dbh->prepare("UPDATE recettes SET portion`= ? 
-                    WHERE recette_id = ? AND ingredient_id = ?");
-        $ajoutIngredient->execute(array($newIngredient, $_GET['id'], 1));
+    foreach ($_POST['plus'] as $ingredient => $signe) {
+        $idIngredient->execute(array($ingredient));
+        $idIngredient = $idIngredient->fetch();
+        if ($signe == "+") {
+            $ajoutIngredient->execute(array($_GET['id'], $idIngredient['id']));
+        }
     }
 }
-if (isset($_POST['plusananas'])) {
-    if ($_POST['plusananas'] == "+") {
-        $ingRecettes = $dbh -> prepare("SELECT * FROM recettes WHERE recette_id = ? 
+if((isset($_POST['moins']) && count($_POST['moins']) > 0)){
+    $retireIngredient = $dbh->prepare("UPDATE recettes SET portion = portion - 1 WHERE recette_id = ? 
                                                 AND ingredient_id = ?");
-        $ingRecettes -> execute(array($_GET['id'], 2));
-        $ingRecettes = $ingRecettes->fetch();
-        $newIngredient = $ingRecettes['portion'] + 1;
-        $ajoutIngredient = $dbh->prepare("UPDATE recettes SET portion`= ? 
-                    WHERE recette_id = ? AND ingredient_id = ?");
-        $ajoutIngredient->execute(array($newIngredient, $_GET['id'], 2));
+    foreach ($_POST['moins'] as $ingredient => $signe) {
+        $idIngredient->execute(array($ingredient));
+        $idIngredient = $idIngredient->fetch();
+        if ($signe == "-") {
+            $retireIngredient->execute(array($_GET['id'], $idIngredient['id']));
+        }
     }
 }
-if (isset($_POST['pluscanelle'])) {
-    if ($_POST['pluscanelle'] == "+") {
-        $ingRecettes = $dbh -> prepare("SELECT * FROM recettes WHERE recette_id = ? 
-                                                AND ingredient_id = ?");
-        $ingRecettes -> execute(array($_GET['id'], 3));
-        $ingRecettes = $ingRecettes->fetch();
-        $newIngredient = $ingRecettes['portion'] + 1;
-        $ajoutIngredient = $dbh->prepare("UPDATE recettes SET portion`= ? 
-                    WHERE recette_id = ? AND ingredient_id = ?");
-        $ajoutIngredient->execute(array($newIngredient, $_GET['id'], 3));
-    }
-}
-if (isset($_POST['pluscarottes'])) {
-    if ($_POST['pluscarottes'] == "+") {
-        $ingRecettes = $dbh -> prepare("SELECT * FROM recettes WHERE recette_id = ? 
-                                                AND ingredient_id = ?");
-        $ingRecettes -> execute(array($_GET['id'], 4));
-        $ingRecettes = $ingRecettes->fetch();
-        $newIngredient = $ingRecettes['portion'] + 1;
-        $ajoutIngredient = $dbh->prepare("UPDATE recettes SET portion`= ? 
-                    WHERE recette_id = ? AND ingredient_id = ?");
-        $ajoutIngredient->execute(array($newIngredient, $_GET['id'], 4));
-    }
-}
-if (isset($_POST['pluscerise'])) {
-    if ($_POST['pluscerise'] == "+") {
-        $ingRecettes = $dbh -> prepare("SELECT * FROM recettes WHERE recette_id = ? 
-                                                AND ingredient_id = ?");
-        $ingRecettes -> execute(array($_GET['id'], 7));
-        $ingRecettes = $ingRecettes->fetch();
-        $newIngredient = $ingRecettes['portion'] + 1;
-        $ajoutIngredient = $dbh->prepare("UPDATE recettes SET portion`= ? 
-                    WHERE recette_id = ? AND ingredient_id = ?");
-        $ajoutIngredient->execute(array($newIngredient, $_GET['id'], 7));
-    }
-}
-if (isset($_POST['pluscitron'])) {
-    if ($_POST['pluscitron'] == "+") {
-        $ingRecettes = $dbh -> prepare("SELECT * FROM recettes WHERE recette_id = ? 
-                                                AND ingredient_id = ?");
-        $ingRecettes -> execute(array($_GET['id'], 8));
-        $ingRecettes = $ingRecettes->fetch();
-        $newIngredient = $ingRecettes['portion'] + 1;
-        $ajoutIngredient = $dbh->prepare("UPDATE recettes SET portion`= ? 
-                    WHERE recette_id = ? AND ingredient_id = ?");
-        $ajoutIngredient->execute(array($newIngredient, $_GET['id'], 8));
-    }
-}
-if (isset($_POST['pluscitrons verts'])) {
-    if ($_POST['pluscitrons verts'] == "+") {
-        $ingRecettes = $dbh -> prepare("SELECT * FROM recettes WHERE recette_id = ? 
-                                                AND ingredient_id = ?");
-        $ingRecettes -> execute(array($_GET['id'], 9));
-        $ingRecettes = $ingRecettes->fetch();
-        $newIngredient = $ingRecettes['portion'] + 1;
-        $ajoutIngredient = $dbh->prepare("UPDATE recettes SET portion`= ? 
-                    WHERE recette_id = ? AND ingredient_id = ?");
-        $ajoutIngredient->execute(array($newIngredient, $_GET['id'], 9));
-    }
-}
-if (isset($_POST['plusconcombre'])) {
-    if ($_POST['plusconcombre'] == "+") {
-        $ingRecettes = $dbh -> prepare("SELECT * FROM recettes WHERE recette_id = ? 
-                                                AND ingredient_id = ?");
-        $ingRecettes -> execute(array($_GET['id'], 10));
-        $ingRecettes = $ingRecettes->fetch();
-        $newIngredient = $ingRecettes['portion'] + 1;
-        $ajoutIngredient = $dbh->prepare("UPDATE recettes SET portion`= ? 
-                    WHERE recette_id = ? AND ingredient_id = ?");
-        $ajoutIngredient->execute(array($newIngredient, $_GET['id'], 10));
-    }
-}
-if (isset($_POST['plusfraise'])) {
-    if ($_POST['plusfraise'] == "+") {
-        $ingRecettes = $dbh -> prepare("SELECT * FROM recettes WHERE recette_id = ? 
-                                                AND ingredient_id = ?");
-        $ingRecettes -> execute(array($_GET['id'], 11));
-        $ingRecettes = $ingRecettes->fetch();
-        $newIngredient = $ingRecettes['portion'] + 1;
-        $ajoutIngredient = $dbh->prepare("UPDATE recettes SET portion`= ? 
-                    WHERE recette_id = ? AND ingredient_id = ?");
-        $ajoutIngredient->execute(array($newIngredient, $_GET['id'], 11));
-    }
-}
-if (isset($_POST['plusfraises'])) {
-    if ($_POST['plusfraises'] == "+") {
-        $ingRecettes = $dbh -> prepare("SELECT * FROM recettes WHERE recette_id = ? 
-                                                AND ingredient_id = ?");
-        $ingRecettes -> execute(array($_GET['id'], 12));
-        $ingRecettes = $ingRecettes->fetch();
-        $newIngredient = $ingRecettes['portion'] + 1;
-        $ajoutIngredient = $dbh->prepare("UPDATE recettes SET portion`= ? 
-                    WHERE recette_id = ? AND ingredient_id = ?");
-        $ajoutIngredient->execute(array($newIngredient, $_GET['id'], 12));
-    }
-}
-if (isset($_POST['plusgingembre'])) {
-    if ($_POST['plusgingembre'] == "+") {
-        $ingRecettes = $dbh -> prepare("UPDATE recettes SET portion = portion + 1 WHERE recette_id = ? 
-                                                AND ingredient_id = ?");
-        $ingRecettes -> execute(array($_GET['id'], 13));
-//        $ingRecettes = $ingRecettes->fetch();
-//        $newIngredient = array($ingRecettes['portion'], 1);
-//        var_dump($ingRecettes['portion']);
-//        $newIng = array_sum($newIngredient);
-//        $ajoutIngredient = $dbh->prepare("UPDATE recettes SET portion`= ?
-//                    WHERE recette_id = ? AND ingredient_id = ?");
-//        $ajoutIngredient->execute(array($newIng, $_GET['id'], 13));
-    }
-}
-if (isset($_POST['pluskiwis'])) {
-    if ($_POST['pluskiwis'] == "+") {
-        $ingRecettes = $dbh -> prepare("SELECT * FROM recettes WHERE recette_id = ? 
-                                                AND ingredient_id = ?");
-        $ingRecettes -> execute(array($_GET['id'], 14));
-        $ingRecettes = $ingRecettes->fetch();
-        $newIngredient = $ingRecettes['portion'] + 1;
-        $ajoutIngredient = $dbh->prepare("UPDATE recettes SET portion`= ? 
-                    WHERE recette_id = ? AND ingredient_id = ?");
-        $ajoutIngredient->execute(array($newIngredient, $_GET['id'], 14));
-    }
-}
-if (isset($_POST['plusoranges'])) {
-    if ($_POST['plusoranges'] == "+") {
-        $ingRecettes = $dbh -> prepare("SELECT * FROM recettes WHERE recette_id = ? 
-                                                AND ingredient_id = ?");
-        $ingRecettes -> execute(array($_GET['id'], 15));
-        $ingRecettes = $ingRecettes->fetch();
-        $newIngredient = $ingRecettes['portion'] + 1;
-        $ajoutIngredient = $dbh->prepare("UPDATE recettes SET portion`= ? 
-                    WHERE recette_id = ? AND ingredient_id = ?");
-        $ajoutIngredient->execute(array($newIngredient, $_GET['id'], 15));
-    }
-}
-if (isset($_POST['pluspamplemousse'])) {
-    if ($_POST['pluspamplemousse'] == "+") {
-        $ingRecettes = $dbh -> prepare("SELECT * FROM recettes WHERE recette_id = ? 
-                                                AND ingredient_id = ?");
-        $ingRecettes -> execute(array($_GET['id'], 16));
-        $ingRecettes = $ingRecettes->fetch();
-        $newIngredient = $ingRecettes['portion'] + 1;
-        $ajoutIngredient = $dbh->prepare("UPDATE recettes SET portion`= ? 
-                    WHERE recette_id = ? AND ingredient_id = ?");
-        $ajoutIngredient->execute(array($newIngredient, $_GET['id'], 16));
-    }
-}
-if (isset($_POST['pluspeches'])) {
-    if ($_POST['pluspeches'] == "+") {
-        $ingRecettes = $dbh -> prepare("SELECT * FROM recettes WHERE recette_id = ? 
-                                                AND ingredient_id = ?");
-        $ingRecettes -> execute(array($_GET['id'], 17));
-        $ingRecettes = $ingRecettes->fetch();
-        $newIngredient = $ingRecettes['portion'] + 1;
-        $ajoutIngredient = $dbh->prepare("UPDATE recettes SET portion`= ? 
-                    WHERE recette_id = ? AND ingredient_id = ?");
-        $ajoutIngredient->execute(array($newIngredient, $_GET['id'], 17));
-    }
-}
-if (isset($_POST['pluspomme'])) {
-    if ($_POST['pluspomme'] == "+") {
-        $ingRecettes = $dbh -> prepare("SELECT * FROM recettes WHERE recette_id = ? 
-                                                AND ingredient_id = ?");
-        $ingRecettes -> execute(array($_GET['id'], 18));
-        $ingRecettes = $ingRecettes->fetch();
-        $newIngredient = $ingRecettes['portion'] + 1;
-        $ajoutIngredient = $dbh->prepare("UPDATE recettes SET portion`= ? 
-                    WHERE recette_id = ? AND ingredient_id = ?");
-        $ajoutIngredient->execute(array($newIngredient, $_GET['id'], 18));
-    }
-}
-if (isset($_POST['pluspommes'])) {
-    if ($_POST['pluspommes'] == "+") {
-        $ingRecettes = $dbh -> prepare("SELECT * FROM recettes WHERE recette_id = ? 
-                                                AND ingredient_id = ?");
-        $ingRecettes -> execute(array($_GET['id'], 19));
-        $ingRecettes = $ingRecettes->fetch();
-        $newIngredient = $ingRecettes['portion'] + 1;
-        $ajoutIngredient = $dbh->prepare("UPDATE recettes SET portion`= ? 
-                    WHERE recette_id = ? AND ingredient_id = ?");
-        $ajoutIngredient->execute(array($newIngredient, $_GET['id'], 19));
-    }
-}
-if (isset($_POST['plustomate'])) {
-    if ($_POST['plustomate'] == "+") {
-        $ingRecettes = $dbh -> prepare("SELECT * FROM recettes WHERE recette_id = ? 
-                                                AND ingredient_id = ?");
-        $ingRecettes -> execute(array($_GET['id'], 20));
-        $ingRecettes = $ingRecettes->fetch();
-        $newIngredient = $ingRecettes['portion'] + 1;
-        $ajoutIngredient = $dbh->prepare("UPDATE recettes SET portion`= ? 
-                    WHERE recette_id = ? AND ingredient_id = ?");
-        $ajoutIngredient->execute(array($newIngredient, $_GET['id'], 20));
-    }
-}
-
 ?>
 <!DOCTYPE html>
 <html lang="fr">
@@ -298,7 +101,7 @@ if (isset($_POST['plustomate'])) {
 <h2 style="text-align: center; margin: 60px 0"><?php echo $nomRecettes['nom'] ?></h2>
 <ul style="margin: 20px auto; width: 335px;">Ingrédients :<br>
     <?php
-    $recette = $dbh->prepare("SELECT ingredients.nom, ingredients.image, recettes.portion 
+    $recette = $dbh->prepare("SELECT ingredients.id, ingredients.nom, ingredients.image, recettes.portion 
                                                 FROM `recettes` LEFT JOIN ingredients 
                                                 ON ingredients.id = recettes.ingredient_id 
                                                 WHERE recette_id = ?");
@@ -313,8 +116,8 @@ if (isset($_POST['plustomate'])) {
              src="assets%20jus/<?php echo $ingredient['image']?>"
              alt="<?php echo $ingredient['nom']?>">
         <form style="float: right;margin-top: 14px;" class="button+or-" method="post">
-            <input style="width: 40px; height: 20px;" type="submit" name="plus<?php echo $ingredient['nom'] ?>" value="+">
-            <input style="width: 40px; height: 20px;" type="submit" name="moins<?php echo $ingredient['nom'] ?>" value="-">
+            <input style="width: 40px; height: 20px;" type="submit" name="plus[<?php echo $ingredient['nom'] ?>]" value="+">
+            <input style="width: 40px; height: 20px;" type="submit" name="moins[<?php echo $ingredient['nom'] ?>]" value="-">
         </form>
         <br>
         <?php
