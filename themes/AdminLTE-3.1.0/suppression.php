@@ -6,7 +6,10 @@ $db = new PDO($dsn, $username, $password);
 var_dump($e);
 }
 $id = $_GET['id'];
-//Requete SQL pour supprimer le contact dans la base
-$suppr = $db -> prepare("DELETE FROM ingredients WHERE id = " . $id);
-$suppr -> execute();
+$suppr = $db -> prepare("DELETE FROM ingredients WHERE id = :id");
+$suppr -> execute(array(
+  ':id' => $id
+));
+var_dump($db -> errorInfo());
+exit();
 header('Location:ingredients.php');

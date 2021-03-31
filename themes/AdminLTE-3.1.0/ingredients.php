@@ -19,6 +19,7 @@ $liste = $liste->fetchAll(PDO::FETCH_ASSOC);
   <meta name="viewport"
         content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="">
   <title>Ingrédients</title>
 </head>
 <body>
@@ -32,8 +33,8 @@ $liste = $liste->fetchAll(PDO::FETCH_ASSOC);
               echo '<tr>';
               echo '<td class="nom"><strong>' . $ingredient['nom'] . '</strong>' . '</td>';
               echo '<td><img src="../assetsjus/' . $ingredient['image'].'.png" alt="image du fruit"></td>';
-              echo '<td class="profil-tache" id="img-tache1"><a href="modification_tache.php?id=' . $ingredient['id'] . '"><img src="images/icon_edit.svg" alt="formulaire modification"></a></td>';
-              echo '<td class="profil-tache" id="img-tache2"><a href="suppression.php?id=' . $ingredient['id'] . '"><img src="images/icon_delete.svg" alt="formulaire suppression"></a></td>';
+              echo '<td class="profil-tache" id="img-tache1"><a href="modification_tache.php?id=' . $ingredient['id'] . '">Modifier</td>';
+              echo '<td class="profil-tache" id="img-tache2"><a href="suppression.php?id=' . $ingredient['id'] . '">Supprimer</a></td>';
               echo '</tr>';
             }
 //
