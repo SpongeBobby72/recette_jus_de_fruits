@@ -99,11 +99,10 @@ if (isset($_POST['submit'])){
                 </button>
             </div>
             <div class="col-md-2 col-sm-3 col-xs-3 text-center">
-                <div class="logo"><a href="utilisateur.php"><img src="themes/front-theme/HTML/assets/images/logo.png" alt="logo"></a></div>
+                <div class="logo"><a href="utilisateur.php"><img src="images/image18.jpg" alt="logo"></a></div>
             </div>
             <div class="col-md-5 col-sm-5 col-xs-5 text-right">
                 <ul class="info-header">
-                    <li><a href="#"><i class="fa fa-volume-control-phone"></i>+336 06 06 06 06</a></li>
                     <li class="search-icon"><a href="#"><i class="fa fa-search"></i>Rechercher</a></li>
                 </ul><!--info-header-->
             </div>
@@ -119,7 +118,7 @@ if (isset($_POST['submit'])){
 <h2 style="text-align: center">CREER VOTRE RECETTE</h2>
 
 <h3 style="text-align: center; margin-top: 30px">Ingrédients</h3>
-<form style="margin-bottom: 50px" method="post">
+<form style="margin-bottom: 50px" method="post" enctype="multipart/form-data">
     <div style="display: block; text-align: center; margin: 50px">
         <label style="display: block; margin-bottom: 20px" for="titreRecette">Nom de la Recette: </label>
         <input type="text" name="titreRecette" id="titreRecette" placeholder="Nom">

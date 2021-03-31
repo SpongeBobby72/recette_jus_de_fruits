@@ -1,3 +1,7 @@
+<?php
+require ('config.php');
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -52,17 +56,17 @@
                 </button>
             </div>
             <div class="col-md-2 col-sm-3 col-xs-3 text-center">
-                <div class="logo"><a href="utilisateur.php"><img src="themes/front-theme/HTML/assets/images/logo.png" alt="logo"></a></div>
+                <div class="logo"><a href="utilisateur.php"><img src="images/image18.jpg" alt="logo"></a></div>
             </div>
             <div class="col-md-5 col-sm-5 col-xs-5 text-right">
                 <ul class="info-header">
-                    <li><a href="#"><i class="fa fa-volume-control-phone"></i>+336 06 06 06 06</a></li>
                     <li class="search-icon"><a href="#"><i class="fa fa-search"></i>Rechercher</a></li>
                 </ul><!--info-header-->
             </div>
         </div>
         <form class="search">
-            <input type="text" placeholder="Search...">
+            <input id="research" type="text" placeholder="Search...">
+            <div id="result-search"></div>
             <span class="close"><img src="themes/front-theme/HTML/assets/images/close2.png" alt="close"></span>
         </form>
     </div>
@@ -121,47 +125,6 @@
     </div><!--category-product-->
 </div>
 <!--=============== End of Category Product ==================-->
-<!--=================== Product Slider =======================-->
-<div class="container-large">
-    <div class="product-slider">
-        <div class="title-head">
-            <h2 class="text-black">Quelle tendance</h2>
-        </div>
-        <div class="slider-product owl-carousel owl-theme">
-            <div class="item">
-                <div class="product">
-                    <div class="images text-center">
-                        <a href="single-product.html"><img src="http://via.placeholder.com/160x230" alt="product1"></a>
-                        <div class="button-group">
-                            <a href="cart.html" class="custom-btn pink"><i class="fa fa-shopping-bag"></i></a>
-                            <a href="#" class="custom-btn pink"><i class="fa fa-search"></i></a>
-                        </div><!--button-group-->
-                    </div><!--images-->
-                    <div class="info-product">
-                        <a href="single-product.html" class="title">Daiya - Cheddar</a>
-                        <span class="price">$20</span>
-                    </div><!--info-product-->
-                </div><!--product-->
-            </div>
-            <div class="item">
-                <div class="product">
-                    <div class="images text-center">
-                        <a href="single-product.html"><img src="http://via.placeholder.com/160x230" alt="product2"></a>
-                        <div class="button-group">
-                            <a href="cart.html" class="custom-btn pink"><i class="fa fa-shopping-bag"></i></a>
-                            <a href="#" class="custom-btn pink"><i class="fa fa-search"></i></a>
-                        </div><!--button-group-->
-                    </div><!--images-->
-                    <div class="info-product">
-                        <a href="single-product.html" class="title">Vegan Burger - Veggie Mix</a>
-                        <span class="price">$9.99</span>
-                    </div><!--info-product-->
-                </div><!--product-->
-            </div>
-        </div><!--slider-product-->
-    </div><!--product-slider-->
-</div>
-<!--=============== End of Product Slider ===================-->
 <div class="container-large">
     <div class="big-banner">
         <div class="row">
@@ -313,5 +276,6 @@
 <script src="themes/front-theme/HTML/assets/js/lib/jquery.counterup.min.js"></script>
 <script src="themes/front-theme/HTML/assets/js/lib/waypoints.min.js"></script>
 <script src="themes/front-theme/HTML/assets/js/main.js"></script>
+<script src="script.js"></script>
 </body>
 </html>
