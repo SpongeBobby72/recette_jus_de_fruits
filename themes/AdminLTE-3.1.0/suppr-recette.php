@@ -32,6 +32,8 @@ if ( isset($_GET['delete_id']) ) {
   $suppr->execute([
     'id' => $_GET['delete_id'],
   ]);
+
+  header('Location:suppr-recette.php');
 }
 
 ?>
@@ -55,8 +57,6 @@ if ( isset($_GET['delete_id']) ) {
 <div id="recettes">
   <div id="recette">
     <h2><?php echo $recette['nom'] . ' <a href="/themes/AdminLTE-3.1.0/suppr-recette.php?delete_id='.$recette['id'].'">Supprimer la recette</a>';
-
-// header('Location:../../suppr-recette.php');
 
       ?></h2>
   </div>
