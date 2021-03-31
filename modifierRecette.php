@@ -123,6 +123,14 @@ if((isset($_POST['moins']) && count($_POST['moins']) > 0)){
         <?php
     }
     ?>
+    <form style="margin-top: 14px;" method="post">
+        <label>Ajout fruit</label>
+        <select name="ajoutFruit" id="">
+            <?php
+            $ingredientList = $dbh -> prepare
+            ?>
+        </select>
+    </form>
 </ul>
 
 <!--================= End of Footer =====================-->
