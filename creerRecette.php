@@ -99,7 +99,7 @@ if (isset($_POST['submit'])){
                 </button>
             </div>
             <div class="col-md-2 col-sm-3 col-xs-3 text-center">
-                <div class="logo"><a href="utilisateur.php"><img src="images/image18.jpg" alt="logo"></a></div>
+                <div class="logo"><a href="utilisateur.php"><img style="width: 65px; height: 113px" src="images/image18.jpg" alt="logo"></a></div>
             </div>
             <div class="col-md-5 col-sm-5 col-xs-5 text-right">
                 <ul class="info-header">

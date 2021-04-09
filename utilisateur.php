@@ -56,7 +56,7 @@ require ('config.php');
                 </button>
             </div>
             <div class="col-md-2 col-sm-3 col-xs-3 text-center">
-                <div class="logo"><a href="utilisateur.php"><img src="images/image18.jpg" alt="logo"></a></div>
+                <div class="logo"><a href="utilisateur.php"><img style="width: 65px; height: 113px" src="images/image18.jpg" alt="logo"></a></div>
             </div>
             <div class="col-md-5 col-sm-5 col-xs-5 text-right">
                 <ul class="info-header">
@@ -85,14 +85,12 @@ require ('config.php');
         <img src="images/herbs-3809512_1920.jpg" alt="slider">
         <div class="text-slider">
             <h2>Jus de fruits<br>bio</h2>
-            <span class="price" style="color: gold;">12.99€</span>
             <a href="voirRecette.php" class="custom-btn text-center yellow">Nos meilleures recettes</a>
         </div><!--text-slider-->
     </div><!--item-->
     <div class="item slide-three">
         <img src="images/detox-1995433_1920.jpg" alt="slider">
         <div class="text-slider last">
-            <h2>Un large choix de jus de légumes<br><span class="text-pink">17€</span></h2>
             <a href="voirRecette.php" class="custom-btn green text-center">Nos meilleures recettes</a>
         </div><!--text-slider-->
     </div><!--item-->
@@ -125,134 +123,14 @@ require ('config.php');
     </div><!--category-product-->
 </div>
 <!--=============== End of Category Product ==================-->
-<div class="container-large">
-    <div class="big-banner">
-        <div class="row">
-            <div class="col-md-6 col-sm-12">
-                <div class="text">
-                    <h2>Débloque ton potentiel<br>avec notre selection</h2><br>
-                    <a href="voirRecette.php" class="custom-btn text-center white">Voir les recettes</a>
-                </div><!--text-->
-            </div>
-        </div>
-    </div><!--big-banner-->
-</div>
-    <!--===================== Schedule ========================-->
-    <div class="container-large">
-        <div class="schedule">
-            <div class="row">
-                <div class="col-md-6 text-center">
-                    <div class="inside">
-                        <div class="title-head">
-                            <h2 class="text-black">Des boissons saines pour un corps sain</h2>
-                            <p>Par la Dream Team</p>
-                        </div>
-                        <ul class="week nav nav-tabs">
-                            <li><a href="#sunday" data-toggle="tab">S</a></li>
-                            <li class="active"><a href="#monday" data-toggle="tab" aria-expanded="true">M</a></li>
-                            <li><a href="#tuesday" data-toggle="tab">T</a></li>
-                            <li><a href="#wednesday" data-toggle="tab">W</a></li>
-                            <li><a href="#thursday" data-toggle="tab">T</a></li>
-                            <li><a href="#friday" data-toggle="tab">F</a></li>
-                            <li><a href="#saturday" data-toggle="tab">S</a></li>
-                        </ul><!--week-->
-                        <div class="tab-content">
-                            <div class="tab-pane fade" id="sunday">
-                                <ul>
-                                    <li class="first">Dimanche:</li>
-                                    <li>Smoothie musclé</li>
-                                    <li>3 abricots</li>
-                                    <li>2 pêches</li>
-                                    <li>1/2 citron</li>
-                                </ul>
-                            </div>
-                            <div class="tab-pane fade in active" id="monday">
-                                <ul>
-                                    <li class="first">Lundi:</li>
-                                    <li>Soupe Tonic</li>
-                                    <li>3 carottes</li>
-                                    <li>1/2 citron vert</li>
-                                    <li>6 rondelles de concombre</li>
-                                </ul>
-                            </div>
-                            <div class="tab-pane fade" id="tuesday">
-                                <ul>
-                                    <li class="first">Mardi:</li>
-                                    <li>Booster</li>
-                                    <li>5 carottes</li>
-                                    <li>Cannelle</li>
-                                </ul>
-                            </div>
-                            <div class="tab-pane fade" id="wednesday">
-                                <ul>
-                                    <li class="first">Mercredi:</li>
-                                    <li> La journée des enfants</li>
-                                    <li>1 concombre</li>
-                                    <li>1 citron</li>
-                                    <li>4 pommes</li>
-                                    <li>Feuilles de menthe</li>
-                                </ul>
-                            </div>
-                            <div class="tab-pane fade" id="thursday">
-                                <ul>
-                                    <li class="first">Jeudi:</li>
-                                    <li>Tonus</li>
-                                    <li>Gingembre</li>
-                                    <li>3 carottes</li>
-                                    <li>6 fraises</li>
-                                    <li>3 rondelles de concombre</li>
-                                </ul>
-                            </div>
-                            <div class="tab-pane fade" id="friday">
-                                <ul>
-                                    <li class="first">Vendredi</li>
-                                    <li>Petit bonus de la semaine</li>
-                                    <li>Mijito</li>
-                                    <li>Feuilles de menthe</li>
-                                    <li>10 glaçons</li>
-                                    <li>Eau gazeuse</li>
-                                    <li>2 cl de sucre de canne</li>
-                                    <li>4 cl de rhum blanc</li>
-                                    <li>1/2 citron vert</li>
-
-                                </ul>
-                            </div>
-                            <div class="tab-pane fade" id="saturday">
-                                <ul>
-                                    <li class="first">Samedi:</li>
-                                    <li>Le retour</li>
-                                    <li>1 citron</li>
-                                    <li>Feuilles de menthe</li>
-                                    <li>Eau gazeuse</li>
-                                </ul>
-                            </div>
-                        </div>
-                        <a href="voirRecette.php" class="custom-btn text-center green">Découvrez!</a>
-                    </div><!--inside-->
-                </div>
-            </div>
-        </div><!--schedule-->
-    </div>
-    <!--====================== Posts ==========================-->
     <!--===================== Footer ========================-->
     <footer class="bg-yellow">
         <div class="container">
             <div class="row">
-                <div class="col-md-12">
-                    <div class="subscribe text-center">
-                        <h2>Rejoins notre société secrète</h2>
-                        <form>
-                            <div class="form-group">
-                                <input type="text" placeholder="Entres ton email...">
-                                <div class="custom-btn bg-black text-yellow">entrer</div>
-                            </div>
-                        </form>
-                    </div><!--subscribe-->
-                </div>
                 <div class="col-md-3 col-sm-6 col-xs-12">
                     <div class="widget-contact">
                         <h4 class="widget-title">contactez nous</h4>
-                        <address>VIA Formation<br>Phone: +336 06 06 06 06<br>Email: via.info@viaformation.fr</address>
+                        <address>Le roi de la recette<br>Email: roidelarecette@bestrecette.fr</address>
                     </div><!--widget-contact-->
                 </div>
             </div>

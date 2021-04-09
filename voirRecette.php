@@ -56,7 +56,7 @@ require ('config.php');
                 </button>
             </div>
             <div class="col-md-2 col-sm-3 col-xs-3 text-center">
-                <div class="logo"><a href="utilisateur.php"><img src="images/image18.jpg" alt="logo"></a></div>
+                <div class="logo"><a href="utilisateur.php"><img style="width: 65px; height: 113px" src="images/image18.jpg" alt="logo"></a></div>
             </div>
             <div class="col-md-5 col-sm-5 col-xs-5 text-right">
                 <ul class="info-header">
@@ -80,7 +80,7 @@ require ('config.php');
     $nomRecettes = $nomRecettes->fetchAll();
     foreach ($nomRecettes as $nom){
         ?>
-        <div style="display: inline-block;background-color: gold; margin: 50px; border-radius: 10px;">
+        <div style="display: inline-block;background-color: gold; margin: 50px; border-radius: 10px;height: 425px; vertical-align: top;">
             <img style="width: 100px; height: 100px; display: inline-block; margin: 30px 75px"
                      src="assets jus/<?php echo $nom['img'] ?>" alt="<?php echo $nom['nom'] ?>">
             <p style="text-align: center"><?php echo $nom['nom'] ?></p>
