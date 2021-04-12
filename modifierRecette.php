@@ -3,7 +3,14 @@ require ('config.php');
 $nomRecettes = $dbh -> prepare("SELECT * FROM nomRecette WHERE id = ?");
 $nomRecettes -> execute(array($_GET['id']));
 $nomRecettes = $nomRecettes->fetch();
+
+$ings = $dbh -> prepare("SELECT * FROM ingredients");
+$ings -> execute();
+$ings = $ings -> fetchAll();
+
 $idIngredient = $dbh -> prepare("SELECT * FROM ingredients WHERE nom = ?");
+
+//Ajout d'une portion
 if ((isset($_POST['plus']) && count($_POST['plus']) > 0)) {
     $ajoutIngredient = $dbh->prepare("UPDATE recettes SET portion = portion + 1 WHERE recette_id = ? 
                                                 AND ingredient_id = ?");
@@ -13,8 +20,11 @@ if ((isset($_POST['plus']) && count($_POST['plus']) > 0)) {
         if ($signe == "+") {
             $ajoutIngredient->execute(array($_GET['id'], $idIngredient['id']));
         }
+        header('Location: modifierRecette.php?id='.$_GET['id']);
     }
 }
+
+//Retrait d'une portion
 if((isset($_POST['moins']) && count($_POST['moins']) > 0)){
     $retireIngredient = $dbh->prepare("UPDATE recettes SET portion = portion - 1 WHERE recette_id = ? 
                                                 AND ingredient_id = ?");
@@ -24,8 +34,21 @@ if((isset($_POST['moins']) && count($_POST['moins']) > 0)){
         if ($signe == "-") {
             $retireIngredient->execute(array($_GET['id'], $idIngredient['id']));
         }
+        header('Location: modifierRecette.php?id='.$_GET['id']);
     }
 }
+//Ajout d'un nouvel ingredient
+if (isset($_POST['plusIng'])) {
+    if (isset($_POST['ingSelect'])) {
+        $ajoutIng = $dbh->prepare("INSERT INTO recettes(recette_id, ingredient_id, portion) VALUES (?, ?, ?)");
+        $ajoutIng->execute(array($_GET['id'], $_POST['ingSelect'], 1));
+    }
+    header('Location: modifierRecette.php?id='.$_GET['id']);
+}
+
+//Retrait d'un ingredient
+
+
 ?>
 <!DOCTYPE html>
 <html lang="fr">
@@ -122,6 +145,19 @@ if((isset($_POST['moins']) && count($_POST['moins']) > 0)){
         <?php
     }
     ?>
+    <form method="post">
+        <select style="margin: 15px 0;" name="ingSelect" id="ingSelect">
+            <option value="">Choisir un fruit</option>
+            <?php
+            foreach ($ings as $ing){
+            ?>
+            <option name="ingredient['<?php echo $ing['id']?>']" value="<?php echo $ing['id']?>"><?php echo $ing['nom']?></option>
+            <?php
+            }
+            ?>
+        </select>
+        <input style="width: 40px; height: 20px;float: right; margin: 15px 45px 0 0" type="submit" name="plusIng" value="+">
+    </form>
 </ul>
 
 <!--================= End of Footer =====================-->
