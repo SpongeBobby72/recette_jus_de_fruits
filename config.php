@@ -12,3 +12,6 @@ $dbh = new PDO($dsn, $username, $password );
 catch (PDOException $e){
 var_dump($e);
 }
+
+session_start();
+

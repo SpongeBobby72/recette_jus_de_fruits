@@ -75,7 +75,7 @@ if (isset($_POST['submit'])){
             <div class="row">
                 <div class="col-md-6 col-sm-6 col-xs-12 text-right" style="width: 100%">
                     <ul>
-                        <li><a href="#">Logout</a></li>
+                        <li><a href="deco.php">Logout</a></li>
                     </ul><!--right-top-bar-->
                 </div>
             </div>
@@ -85,12 +85,32 @@ if (isset($_POST['submit'])){
         <div class="row">
             <div class="col-md-5 col-sm-4 col-xs-4">
                 <ul class="menu">
+                    <?php
+                    if (isset($_GET['id'])){
+                    ?>
+                    <li><a href="utilisateur.php?id=<?php echo $_GET['id']?>">Accueil</a></li>
+                    <?php
+                    }else {
+                    ?>
                     <li><a href="utilisateur.php">Accueil</a></li>
+                    <?php
+                    }
+                    ?>
                     <li class="children">
                         <a>Recettes</a>
                         <ul class="sub-menu">
-                            <li><a href="creerRecette.php">Créer une recette</a></li>
-                            <li><a href="voirRecette.php">Voir nos recettes</a></li>
+                            <li><a href="#">Créer une recette</a></li>
+                            <?php
+                            if (isset($_GET['id'])){
+                                ?>
+                                <li><a href="voirRecette.php?id=<?php echo $_GET['id']?>">Voir nos recettes</a></li>
+                                <?php
+                            } else {
+                                ?>
+                                <li><a href="voirRecette.php">Voir nos recettes</a></li>
+                                <?php
+                            }
+                            ?>
                         </ul><!--sub-menu-->
                     </li>
                 </ul><!--menu-->
