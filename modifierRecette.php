@@ -34,8 +34,8 @@ if((isset($_POST['moins']) && count($_POST['moins']) > 0)){
         if ($signe == "-") {
             $retireIngredient->execute(array($_GET['id'], $idIngredient['id']));
         }
-        header('Location: modifierRecette.php?id='.$_GET['id']);
     }
+    header('Location: modifierRecette.php?id='.$_GET['id']);
 }
 //Ajout d'un nouvel ingredient
 if (isset($_POST['plusIng'])) {
@@ -46,7 +46,9 @@ if (isset($_POST['plusIng'])) {
     header('Location: modifierRecette.php?id='.$_GET['id']);
 }
 
-//Retrait d'un ingredient
+//Suppression d'un ingredient
+$suppIng = $dbh -> prepare("DELETE FROM recettes WHERE portion = 0");
+$suppIng -> execute();
 
 
 ?>
