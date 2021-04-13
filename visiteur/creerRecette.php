@@ -20,7 +20,7 @@ if (isset($_POST['submit'])){
                     $myUploadedFile = $_FILES["imageRecette"];
                     $tmpName = $myUploadedFile["tmp_name"];
                     $fileName = time() . '_' . $myUploadedFile['name'];
-                    $resultat = move_uploaded_file($tmpName, "assets_jus/" . $fileName);
+                    $resultat = move_uploaded_file($tmpName, "../assets_jus/" . $fileName);
                     if ($resultat) {
                         $reqAjoutRecette = $dbh->prepare("INSERT INTO nomRecette (nom, img) VALUES (?, ?)");
                         $reqAjoutRecette->execute(array($_POST['titreRecette'], $fileName));
@@ -39,7 +39,7 @@ if (isset($_POST['submit'])){
                             $myUploadedFile = $_FILES["imageRecette"];
                             $tmpName = $myUploadedFile["tmp_name"];
                             $fileName = time() . '_' . $myUploadedFile['name'];
-                            $resultat = move_uploaded_file($tmpName, "assets_jus/" . $fileName);
+                            $resultat = move_uploaded_file($tmpName, "../assets_jus/" . $fileName);
                             if ($resultat) {
                                 $reqAjoutRecette = $dbh->prepare("UPDATE `nomRecette` SET `img`= ? WHERE nom = ?");
                                 $reqAjoutRecette->execute(array($fileName, $_POST['titreRecette']));
@@ -177,7 +177,7 @@ $reqSupIngRecette -> execute(array($portionNull));
 foreach ($reqFruits as $fruit){
 ?>
     <img style="width: 100px; height: 100px; display: inline-block; margin: 30px 75px"
-         src="assets_jus/<?php echo $fruit['image'] ?>" alt="<?php echo $fruit['nom'] ?>">
+         src="../assets_jus/<?php echo $fruit['image'] ?>" alt="<?php echo $fruit['nom'] ?>">
         <input style="width: 75px; padding: 10px; margin-left: -170px" type="number" value="0"
                name="ingredient[<?php echo $fruit['id'] ?>]" id="number">
     <?php

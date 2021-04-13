@@ -42,23 +42,28 @@ require 'includes/header.php';
                             } else if ( isset($_POST['nom'])) {
                                 $photo = '';
                                 if ( isset($_FILES['photo']) ) {
-                                    move_uploaded_file($_FILES['photo']['tmp_name'], 'images/'.$_FILES['photo']['name']);
-                                    // Resample
-                                    $image1 = imagecreatetruecolor(150, 150);
-                                    $image2 = imagecreatefrompng('images/'.$_FILES['photo']['name']);
-                                    $size = getimagesize('images/'.$_FILES['photo']['name']);
-                                    imagecopyresampled($image1, $image2, 0, 0, 0, 0, 150, 150, $size[0], $size[1]);
-                                    imagepng($image1, 'images/test1.png', 9);
-                                    $photo = $_FILES['photo']['name'];
+                                    $tailleMax = 2097152;
+                                    if ($_FILES['photo']['size'] <= $tailleMax) {
+                                        $extensionsValides = array('jpg', 'jpeg', 'gif', 'png');
+                                        $extensionUpload = strtolower(substr(strrchr($_FILES['photo']['name'], "."), 1));
+                                        if (in_array($extensionUpload, $extensionsValides)) {
+                                            $myUploadedFile = $_FILES["photo"];
+                                            $tmpName = $myUploadedFile["tmp_name"];
+                                            $fileName = time() . '_' . $myUploadedFile['name'];
+                                            $resultat = move_uploaded_file($tmpName, "../assets_jus/" . $fileName);
+                                            if ($resultat){
+                                                $ajout_ingredient = $dbh->prepare("INSERT INTO ingredients (nom, categorie_id, image) VALUES (:nom, :categorie_id, :image)");
+                                                $ajout_ingredient->execute([
+                                                    "nom" => $_POST['nom'],
+                                                    "categorie_id" => $_POST['categorie'],
+                                                    "image" => $fileName,
+                                                ]);
+                                                header('Location: /admin/index.php');
+                                            }
+                                        }
+                                    }
                                 }
-                                $ajout_ingredient = $dbh->prepare("INSERT INTO ingredients (nom, categorie_id, image) VALUES (:nom, :categorie_id, :image)");
-                                $ajout_ingredient->execute([
-                                        "nom" => $_POST['nom'],
-                                        "categorie_id" => $_POST['categorie'],
-                                        "image" => $photo,
-                                ]);
 
-                                header('Location: /admin/index.php');
                             }
                             if ( isset($_GET['id']) ) {
                                 $recup_ingredient = $dbh->prepare("SELECT * FROM ingredients WHERE id = :id");

@@ -158,7 +158,7 @@ $suppIng -> execute();
             <?php echo $ingredient['portion']." ".$ingredient['nom'] ?>
         </li>
         <img style="width: 30px; display: inline-block;"
-             src="assets_jus/<?php echo $ingredient['image']?>"
+             src="../assets_jus/<?php echo $ingredient['image']?>"
              alt="<?php echo $ingredient['nom']?>">
         <form style="float: right;margin-top: 14px;" class="button+or-" method="post">
             <input style="width: 40px; height: 20px;" type="submit" name="plus[<?php echo $ingredient['nom'] ?>]" value="+">
