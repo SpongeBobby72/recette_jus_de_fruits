@@ -12,7 +12,7 @@ $idIngredient = $dbh -> prepare("SELECT * FROM ingredients WHERE nom = ?");
 
 //Ajout d'une portion
 if ((isset($_POST['plus']) && count($_POST['plus']) > 0)) {
-    $ajoutIngredient = $dbh->prepare("UPDATE recettes SET portion = portion + 1 WHERE recette_id = ? 
+    $ajoutIngredient = $dbh->prepare("UPDATE recette SET portion = portion + 1 WHERE recette_id = ? 
                                                 AND ingredient_id = ?");
     foreach ($_POST['plus'] as $ingredient => $signe) {
         $idIngredient->execute(array($ingredient));
@@ -26,7 +26,7 @@ if ((isset($_POST['plus']) && count($_POST['plus']) > 0)) {
 
 //Retrait d'une portion
 if((isset($_POST['moins']) && count($_POST['moins']) > 0)){
-    $retireIngredient = $dbh->prepare("UPDATE recettes SET portion = portion - 1 WHERE recette_id = ? 
+    $retireIngredient = $dbh->prepare("UPDATE recette SET portion = portion - 1 WHERE recette_id = ? 
                                                 AND ingredient_id = ?");
     foreach ($_POST['moins'] as $ingredient => $signe) {
         $idIngredient->execute(array($ingredient));
@@ -40,14 +40,14 @@ if((isset($_POST['moins']) && count($_POST['moins']) > 0)){
 //Ajout d'un nouvel ingredient
 if (isset($_POST['plusIng'])) {
     if (isset($_POST['ingSelect'])) {
-        $ajoutIng = $dbh->prepare("INSERT INTO recettes(recette_id, ingredient_id, portion) VALUES (?, ?, ?)");
+        $ajoutIng = $dbh->prepare("INSERT INTO recette(recette_id, ingredient_id, portion) VALUES (?, ?, ?)");
         $ajoutIng->execute(array($_GET['id'], $_POST['ingSelect'], 1));
     }
     header('Location: modifierRecette.php?id='.$_GET['id']);
 }
 
 //Suppression d'un ingredient
-$suppIng = $dbh -> prepare("DELETE FROM recettes WHERE portion = 0");
+$suppIng = $dbh -> prepare("DELETE FROM recette WHERE portion = 0");
 $suppIng -> execute();
 
 
@@ -146,9 +146,9 @@ $suppIng -> execute();
 <h2 style="text-align: center; margin: 60px 0"><?php echo $nomRecettes['nom'] ?></h2>
 <ul style="margin: 20px auto; width: 335px;">Ingrédients :<br>
     <?php
-    $recette = $dbh->prepare("SELECT ingredients.id, ingredients.nom, ingredients.image, recettes.portion 
-                                                FROM `recettes` LEFT JOIN ingredients 
-                                                ON ingredients.id = recettes.ingredient_id 
+    $recette = $dbh->prepare("SELECT ingredients.id, ingredients.nom, ingredients.image, recette.portion 
+                                                FROM `recette` LEFT JOIN ingredients 
+                                                ON ingredients.id = recette.ingredient_id 
                                                 WHERE recette_id = ?");
     $recette->execute(array($nomRecettes['id']));
     $recette = $recette -> fetchAll();

@@ -106,9 +106,9 @@ require('../config.php');
             <p style="text-align: center"><?php echo $nom['nom'] ?></p>
             <ul style="margin: 20px 39px;">Ingrédients :<br>
                 <?php
-                $recette = $dbh->prepare("SELECT ingredients.nom, ingredients.image, recettes.portion 
-                                                FROM `recettes` LEFT JOIN ingredients 
-                                                ON ingredients.id = recettes.ingredient_id 
+                $recette = $dbh->prepare("SELECT ingredients.nom, ingredients.image, recette.portion 
+                                                FROM `recette` LEFT JOIN ingredients 
+                                                ON ingredients.id = recette.ingredient_id 
                                                 WHERE recette_id = ?");
                 $recette->execute(array($nom['id']));
                 $recette = $recette -> fetchAll();

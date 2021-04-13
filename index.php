@@ -18,7 +18,7 @@ if (isset($_POST['submit'])){
                 $_SESSION['UtilisateurCourant'] =
                     new Utilisateur($reqDroit['id'], $id);
             } else if ($reqDroit['droit_id'] == 2) {
-                header('Location: admin/admin.php?id='.$reqDroit['id']);
+                header('Location: admin/index.php?id='.$reqDroit['id']);
                 $_SESSION['UtilisateurCourant'] =
                     new Utilisateur($reqDroit['id'], $id);
             }

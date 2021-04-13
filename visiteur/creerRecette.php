@@ -24,12 +24,12 @@ if (isset($_POST['submit'])){
             $reqRecette = $reqRecette->fetch();
         }
 
-        $reqVoirRecette = $dbh -> prepare("SELECT * FROM recettes WHERE recette_id = ?");
+        $reqVoirRecette = $dbh -> prepare("SELECT * FROM recette WHERE recette_id = ?");
         $reqVoirRecette -> execute(array($reqRecette['id']));
         $reqVoirRecette = $reqVoirRecette -> rowCount();
         if ($reqVoirRecette == 0){
             if (isset($_POST['ingredient']) && count($_POST['ingredient']) > 0) {
-                $reqAjoutFruits = $dbh->prepare("INSERT INTO `recettes`
+                $reqAjoutFruits = $dbh->prepare("INSERT INTO `recette`
                                     (`recette_id`,`ingredient_id`, `portion`) VALUES (?,?,?)");
                 foreach ($_POST['ingredient'] as $ingredient => $portion) {
                     if ($portion > 0) {
