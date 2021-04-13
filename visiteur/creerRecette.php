@@ -4,24 +4,51 @@ $reqFruits = $dbh -> prepare("SELECT * FROM ingredients");
 $reqFruits -> execute();
 $reqFruits = $reqFruits->fetchAll();
 $compte = 1;
+//var_dump($_POST);
 if (isset($_POST['submit'])){
-    if (!empty($_POST['imageRecette']) && !empty($_POST['titreRecette'])) {
+    if (!empty($_FILES['imageRecette']) && !empty($_POST['titreRecette'])) {
 //        Création du nom et de l'image de la recette dans la base de données
         $reqRecette = $dbh -> prepare("SELECT * FROM nomRecette WHERE nom = ?");
         $reqRecette -> execute(array($_POST['titreRecette']));
         $reqRecette = $reqRecette ->rowCount();
         if ($reqRecette == 0) {
-            $reqAjoutRecette = $dbh->prepare("INSERT INTO nomRecette (nom, img) VALUES (?, ?)");
-            $reqAjoutRecette->execute(array($_POST['titreRecette'], $_POST['imageRecette']));
-            $reqRecette = $dbh->prepare("SELECT * FROM nomRecette WHERE nom = ?");
-            $reqRecette->execute(array($_POST['titreRecette']));
-            $reqRecette = $reqRecette->fetch();
+            $tailleMax = 2097152;
+            if ($_FILES['imageRecette']['size'] <= $tailleMax) {
+                $extensionsValides = array('jpg', 'jpeg', 'gif', 'png');
+                $extensionUpload = strtolower(substr(strrchr($_FILES['imageRecette']['name'], "."), 1));
+                if (in_array($extensionUpload, $extensionsValides)) {
+                    $myUploadedFile = $_FILES["imageRecette"];
+                    $tmpName = $myUploadedFile["tmp_name"];
+                    $fileName = time() . '_' . $myUploadedFile['name'];
+                    $resultat = move_uploaded_file($tmpName, "assets_jus/" . $fileName);
+                    if ($resultat) {
+                        $reqAjoutRecette = $dbh->prepare("INSERT INTO nomRecette (nom, img) VALUES (?, ?)");
+                        $reqAjoutRecette->execute(array($_POST['titreRecette'], $fileName));
+                        $reqRecette = $dbh->prepare("SELECT * FROM nomRecette WHERE nom = ?");
+                        $reqRecette->execute(array($_POST['titreRecette']));
+                        $reqRecette = $reqRecette->fetch();
+                    }
+                }
+            }
         } else {
-            $reqAjoutRecette = $dbh->prepare("UPDATE `nomRecette` SET `img`= ? WHERE nom = ?");
-            $reqAjoutRecette->execute(array($_POST['imageRecette'], $_POST['titreRecette']));
-            $reqRecette = $dbh->prepare("SELECT * FROM nomRecette WHERE nom = ?");
-            $reqRecette->execute(array($_POST['titreRecette']));
-            $reqRecette = $reqRecette->fetch();
+                    $tailleMax = 2097152;
+                    if ($_FILES['imageRecette']['size'] <= $tailleMax) {
+                        $extensionsValides = array('jpg', 'jpeg', 'gif', 'png');
+                        $extensionUpload = strtolower(substr(strrchr($_FILES['imageRecette']['name'], "."), 1));
+                        if (in_array($extensionUpload, $extensionsValides)) {
+                            $myUploadedFile = $_FILES["imageRecette"];
+                            $tmpName = $myUploadedFile["tmp_name"];
+                            $fileName = time() . '_' . $myUploadedFile['name'];
+                            $resultat = move_uploaded_file($tmpName, "assets_jus/" . $fileName);
+                            if ($resultat) {
+                                $reqAjoutRecette = $dbh->prepare("UPDATE `nomRecette` SET `img`= ? WHERE nom = ?");
+                                $reqAjoutRecette->execute(array($fileName, $_POST['titreRecette']));
+                                $reqRecette = $dbh->prepare("SELECT * FROM nomRecette WHERE nom = ?");
+                                $reqRecette->execute(array($_POST['titreRecette']));
+                                $reqRecette = $reqRecette->fetch();
+                            }
+                        }
+                }
         }
 
         $reqVoirRecette = $dbh -> prepare("SELECT * FROM recette WHERE recette_id = ?");
@@ -43,6 +70,9 @@ if (isset($_POST['submit'])){
     }
 }
 
+$portionNull = 0;
+$reqSupIngRecette = $dbh -> prepare("DELETE FROM recette WHERE portion = ?");
+$reqSupIngRecette -> execute(array($portionNull));
 
 ?>
 <!DOCTYPE html>
@@ -147,8 +177,8 @@ if (isset($_POST['submit'])){
 foreach ($reqFruits as $fruit){
 ?>
     <img style="width: 100px; height: 100px; display: inline-block; margin: 30px 75px"
-         src="assets%20jus/<?php echo $fruit['image'] ?>" alt="<?php echo $fruit['nom'] ?>">
-        <input style="width: 75px; padding: 10px; margin-left: -170px" type="number"
+         src="assets_jus/<?php echo $fruit['image'] ?>" alt="<?php echo $fruit['nom'] ?>">
+        <input style="width: 75px; padding: 10px; margin-left: -170px" type="number" value="0"
                name="ingredient[<?php echo $fruit['id'] ?>]" id="number">
     <?php
 }

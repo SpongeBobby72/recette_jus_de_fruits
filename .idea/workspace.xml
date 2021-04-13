@@ -3,10 +3,29 @@
   <component name="ChangeListManager">
     <list default="true" id="5ac31a1c-bd5b-4d3c-9bf2-b7ce331a0f96" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/admin.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/visiteur/assets jus/abricots.png" beforeDir="false" afterPath="$PROJECT_DIR$/visiteur/assets_jus/abricots.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/visiteur/assets jus/ananas.png" beforeDir="false" afterPath="$PROJECT_DIR$/visiteur/assets_jus/ananas.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/visiteur/assets jus/canelle.png" beforeDir="false" afterPath="$PROJECT_DIR$/visiteur/assets_jus/canelle.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/visiteur/assets jus/carottes.png" beforeDir="false" afterPath="$PROJECT_DIR$/visiteur/assets_jus/carottes.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/visiteur/assets jus/cerise.png" beforeDir="false" afterPath="$PROJECT_DIR$/visiteur/assets_jus/cerise.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/visiteur/assets jus/citron.png" beforeDir="false" afterPath="$PROJECT_DIR$/visiteur/assets_jus/citron.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/visiteur/assets jus/citrons-verts.png" beforeDir="false" afterPath="$PROJECT_DIR$/visiteur/assets_jus/citrons-verts.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/visiteur/assets jus/concombre.png" beforeDir="false" afterPath="$PROJECT_DIR$/visiteur/assets_jus/concombre.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/visiteur/assets jus/fraise.png" beforeDir="false" afterPath="$PROJECT_DIR$/visiteur/assets_jus/fraise.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/visiteur/assets jus/fraises.png" beforeDir="false" afterPath="$PROJECT_DIR$/visiteur/assets_jus/fraises.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/visiteur/assets jus/gingembre.png" beforeDir="false" afterPath="$PROJECT_DIR$/visiteur/assets_jus/gingembre.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/visiteur/assets jus/jus-1.png" beforeDir="false" afterPath="$PROJECT_DIR$/visiteur/assets_jus/jus-1.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/visiteur/assets jus/jus-2.png" beforeDir="false" afterPath="$PROJECT_DIR$/visiteur/assets_jus/jus-2.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/visiteur/assets jus/jus-3.png" beforeDir="false" afterPath="$PROJECT_DIR$/visiteur/assets_jus/jus-3.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/visiteur/assets jus/jus-4.png" beforeDir="false" afterPath="$PROJECT_DIR$/visiteur/assets_jus/jus-4.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/visiteur/assets jus/kiwis.png" beforeDir="false" afterPath="$PROJECT_DIR$/visiteur/assets_jus/kiwis.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/visiteur/assets jus/oranges.png" beforeDir="false" afterPath="$PROJECT_DIR$/visiteur/assets_jus/oranges.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/visiteur/assets jus/pamplemousse.png" beforeDir="false" afterPath="$PROJECT_DIR$/visiteur/assets_jus/pamplemousse.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/visiteur/assets jus/peches.png" beforeDir="false" afterPath="$PROJECT_DIR$/visiteur/assets_jus/peches.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/visiteur/assets jus/pomme.png" beforeDir="false" afterPath="$PROJECT_DIR$/visiteur/assets_jus/pomme.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/visiteur/assets jus/pommes.png" beforeDir="false" afterPath="$PROJECT_DIR$/visiteur/assets_jus/pommes.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/visiteur/assets jus/tomate.png" beforeDir="false" afterPath="$PROJECT_DIR$/visiteur/assets_jus/tomate.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/visiteur/creerRecette.php" beforeDir="false" afterPath="$PROJECT_DIR$/visiteur/creerRecette.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/visiteur/modifierRecette.php" beforeDir="false" afterPath="$PROJECT_DIR$/visiteur/modifierRecette.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/visiteur/voirRecette.php" beforeDir="false" afterPath="$PROJECT_DIR$/visiteur/voirRecette.php" afterDir="false" />
     </list>
     <list id="72b8ca23-9ebd-4fd0-856b-83b6963d2d5b" name="Changes by charlene" comment="" />
@@ -40,7 +59,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../indexPorteFolio/config.php" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../indexPorteFolio/admin.php" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.stylelint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -78,7 +97,7 @@
       <workItem from="1617988676133" duration="4990000" />
       <workItem from="1618159120695" duration="629000" />
       <workItem from="1618313692963" duration="121000" />
-      <workItem from="1618313838012" duration="637000" />
+      <workItem from="1618313838012" duration="2035000" />
     </task>
     <servers />
   </component>

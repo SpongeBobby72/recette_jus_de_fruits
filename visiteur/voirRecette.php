@@ -102,7 +102,7 @@ require('../config.php');
         ?>
         <div style="display: inline-block;background-color: gold; margin: 50px; border-radius: 10px;height: 425px; vertical-align: top;">
             <img style="width: 100px; height: 100px; display: inline-block; margin: 30px 75px"
-                     src="assets jus/<?php echo $nom['img'] ?>" alt="<?php echo $nom['nom'] ?>">
+                     src="assets_jus/<?php echo $nom['img'] ?>" alt="<?php echo $nom['nom'] ?>">
             <p style="text-align: center"><?php echo $nom['nom'] ?></p>
             <ul style="margin: 20px 39px;">Ingrédients :<br>
                 <?php
@@ -118,7 +118,7 @@ require('../config.php');
                         <?php echo $ingredient['portion']." ".$ingredient['nom'] ?>
                     </li>
                     <img style="width: 30px; display: inline-block;"
-                         src="assets%20jus/<?php echo $ingredient['image']?>"
+                         src="assets_jus/<?php echo $ingredient['image']?>"
                          alt="<?php echo $ingredient['nom']?>"><br>
                 <?php
                 }
