@@ -14,11 +14,11 @@ if (isset($_POST['submit'])){
             $reqDroit -> execute(array($id, $pass));
             $reqDroit = $reqDroit -> fetch();
             if ($reqDroit['droit_id'] == 1) {
-                header('Location: utilisateur.php?id='.$reqDroit['id']);
+                header('Location: visiteur/utilisateur.php?id='.$reqDroit['id']);
                 $_SESSION['UtilisateurCourant'] =
                     new Utilisateur($reqDroit['id'], $id);
             } else if ($reqDroit['droit_id'] == 2) {
-                header('Location: admin.php?id='.$reqDroit['id']);
+                header('Location: admin/admin.php?id='.$reqDroit['id']);
                 $_SESSION['UtilisateurCourant'] =
                     new Utilisateur($reqDroit['id'], $id);
             }
@@ -35,7 +35,7 @@ if (isset($_POST['submit'])){
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="../AdminLTE-3.1.0/dist/css/adminlte.css">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="visiteur/style.css">
     <title>identification</title>
     <link rel="stylesheet" type="text/css" href="themes/front-theme/HTML/assets/css/lib/bootstrap.min.css">
     <!-- Font Awesome / Icon Fonts -->
@@ -48,7 +48,7 @@ if (isset($_POST['submit'])){
     <link rel="stylesheet" type="text/css" href="themes/front-theme/HTML/assets/css/lib/slick.css">
     <!-- Responsive Theme -->
     <link rel="stylesheet" type="text/css" href="themes/front-theme/HTML/assets/css/responsive.css">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="visiteur/style.css">
     <link rel="stylesheet" href="styleIdentification.css">
 </head>
 <body>
@@ -61,11 +61,6 @@ if (isset($_POST['submit'])){
             <input type="password" name="pass" id="pass"><br>
             <input type="submit" name="submit" id="submit" value="Connection">
         </form>
-    <!--<a href="admin.php">Administrateur</a>-->
-    <!--</div>-->
-    <!---->
-    <!--<div>-->
-    <!--<a href="utilisateur.php">Utilisateur</a>-->
     </div>
 </body>
 </html>

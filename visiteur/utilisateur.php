@@ -1,5 +1,5 @@
 <?php
-require ('config.php');
+require('../config.php');
 ?>
 
 <!DOCTYPE html>
@@ -9,17 +9,17 @@ require ('config.php');
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.5">
     <!-- Framework Css -->
-    <link rel="stylesheet" type="text/css" href="themes/front-theme/HTML/assets/css/lib/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="../themes/front-theme/HTML/assets/css/lib/bootstrap.min.css">
     <!-- Font Awesome / Icon Fonts -->
-    <link rel="stylesheet" type="text/css" href="themes/front-theme/HTML/assets/css/lib/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="../themes/front-theme/HTML/assets/css/lib/font-awesome.min.css">
     <!-- Owl Carousel / Carousel- Slider -->
-    <link rel="stylesheet" type="text/css" href="themes/front-theme/HTML/assets/css/lib/owl.carousel.min.css">
+    <link rel="stylesheet" type="text/css" href="../themes/front-theme/HTML/assets/css/lib/owl.carousel.min.css">
     <!-- Video YouTube -->
-    <link rel="stylesheet" type="text/css" href="themes/front-theme/HTML/assets/css/lib/lazyYT.min.css">
+    <link rel="stylesheet" type="text/css" href="../themes/front-theme/HTML/assets/css/lib/lazyYT.min.css">
     <!-- Carousel- Slider / Vertical -->
-    <link rel="stylesheet" type="text/css" href="themes/front-theme/HTML/assets/css/lib/slick.css">
+    <link rel="stylesheet" type="text/css" href="../themes/front-theme/HTML/assets/css/lib/slick.css">
     <!-- Responsive Theme -->
-    <link rel="stylesheet" type="text/css" href="themes/front-theme/HTML/assets/css/responsive.css">
+    <link rel="stylesheet" type="text/css" href="../themes/front-theme/HTML/assets/css/responsive.css">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -78,7 +78,7 @@ require ('config.php');
         <form class="search">
             <input id="research" type="text" placeholder="Search...">
             <div id="result-search"></div>
-            <span class="close"><img src="themes/front-theme/HTML/assets/images/close2.png" alt="close"></span>
+            <span class="close"><img src="../themes/front-theme/HTML/assets/images/close2.png" alt="close"></span>
         </form>
     </div>
 </header>
@@ -153,18 +153,18 @@ require ('config.php');
     </footer>
     <!--================= End of Footer =====================-->
 </div><!--wrapper-->
-<script src="themes/front-theme/HTML/assets/js/lib/jquery.js"></script>
-<script src="themes/front-theme/HTML/assets/js/lib/bootstrap.min.js"></script>
-<script src="themes/front-theme/HTML/assets/js/lib/owl.carousel.min.js"></script>
-<script src="themes/front-theme/HTML/assets/js/lib/jquery-ui.min.js"></script>
-<script src="themes/front-theme/HTML/assets/js/lib/TweenMax.min.js"></script>
-<script src="themes/front-theme/HTML/assets/js/lib/lazyYT.js"></script>
-<script src="themes/front-theme/HTML/assets/js/lib/masonry.pkgd.min.js"></script>
-<script src="themes/front-theme/HTML/assets/js/lib/jquery.filterizr.min.js"></script>
-<script src="themes/front-theme/HTML/assets/js/lib/slick.min.js"></script>
-<script src="themes/front-theme/HTML/assets/js/lib/jquery.counterup.min.js"></script>
-<script src="themes/front-theme/HTML/assets/js/lib/waypoints.min.js"></script>
-<script src="themes/front-theme/HTML/assets/js/main.js"></script>
+<script src="../themes/front-theme/HTML/assets/js/lib/jquery.js"></script>
+<script src="../themes/front-theme/HTML/assets/js/lib/bootstrap.min.js"></script>
+<script src="../themes/front-theme/HTML/assets/js/lib/owl.carousel.min.js"></script>
+<script src="../themes/front-theme/HTML/assets/js/lib/jquery-ui.min.js"></script>
+<script src="../themes/front-theme/HTML/assets/js/lib/TweenMax.min.js"></script>
+<script src="../themes/front-theme/HTML/assets/js/lib/lazyYT.js"></script>
+<script src="../themes/front-theme/HTML/assets/js/lib/masonry.pkgd.min.js"></script>
+<script src="../themes/front-theme/HTML/assets/js/lib/jquery.filterizr.min.js"></script>
+<script src="../themes/front-theme/HTML/assets/js/lib/slick.min.js"></script>
+<script src="../themes/front-theme/HTML/assets/js/lib/jquery.counterup.min.js"></script>
+<script src="../themes/front-theme/HTML/assets/js/lib/waypoints.min.js"></script>
+<script src="../themes/front-theme/HTML/assets/js/main.js"></script>
 <script src="script.js"></script>
 </body>
 </html>
